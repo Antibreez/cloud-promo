@@ -1,0 +1,141 @@
+.header {
+  background-image: url("../img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: calc(var(--vh, 1vh) * 100);
+  display: flex;
+  flex-direction: column;
+
+  &__bar {
+    padding: 27px 0 23px;
+  }
+
+  &__bar-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 13px 0 15px;
+    background-color: #fff;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+
+    & .header__nav-link {
+      color: #000;
+    }
+
+    & .header__logo {
+      width: 74px;
+      height: 52px;
+    }
+
+    &.opened {
+      transform: translateY(0);
+    }
+  }
+
+  &__bar-container {
+    display: flex;
+    align-items: center;
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+
+  &__nav {
+    margin: 0 40px 0 auto;
+  }
+
+  &__nav-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+
+  &__nav-item {
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+
+  &__nav-link {
+    @include font(16px, 28px, 400);
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &__body {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+
+  &__body-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title-block {
+    max-width: 525px;
+  }
+
+  &__title {
+    @include font(72px, 72px);
+    margin: 0 0 32px;
+    color: #fff;
+  }
+
+  &__desc {
+    @include font(16px, 24px, 400);
+    color: #fff;
+    margin: 0;
+  }
+
+  &__img-block {
+    max-width: 570px;
+    margin-right: 20px;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__img-picture {
+    margin-bottom: 13px;
+  }
+
+  &__price-block {
+    @include font(18px, 24px, 400);
+  }
+
+  &__price-title {
+    color: #fff;
+    margin-right: 15px;
+  }
+
+  &__price {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #fff;
+    border-radius: 8px;
+    color: #000;
+  }
+
+  &__bottom {
+    margin-top: auto;
+  }
+
+  &__brands-list {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    padding-top: 40px;
+    padding-bottom: 76px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  &__brands-item {
+    &:not(:last-child) {
+      margin-right: 160px;
+    }
+  }
+}
