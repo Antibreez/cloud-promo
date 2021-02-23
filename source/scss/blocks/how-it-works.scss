@@ -1,0 +1,163 @@
+.how-it-works {
+  padding-top: 120px;
+  margin-bottom: 290px;
+
+  &__container {
+    padding-bottom: 100px;
+    border-bottom: 1px solid #DDDDDD;
+  }
+
+  &__title {
+    @include font(24px, 32px);
+    color: $text-minor;
+    margin: 0 0 24px;
+  }
+
+  &__body {
+    display: flex;
+  }
+
+  &__left-side {
+    max-width: 630px;
+    padding-right: 30px;
+  }
+
+  &__desc {
+    @include font(40px, 48px);
+    color: $text-main;
+    margin: 0 0 56px;
+  }
+
+  &__stages-list {
+    margin: 0 0 52px;
+    padding: 0;
+  }
+
+  &__stages-item {
+    @include font(16px, 24px, 400);
+    color: $text-main;
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    & span:first-child {
+      width: 48px;
+      height: 48px;
+      margin-right: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background-color: #D1D8E1;
+    }
+
+    & span:last-child {
+      max-width: 347px;
+    }
+  }
+
+  &__service-note {
+    @include font(24px, 36px, 400);
+    color: $text-main;
+    margin: 0 0 24px;
+  }
+
+  &__service-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__service-item {
+    @include font(16px, 24px, 400);
+    position: relative;
+    color: $text-main;
+    padding-left: 72px;
+    max-width: 419px;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 14px;
+      width: 24px;
+      height: 24px;
+      background-image: url("../img/check.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__right-side {
+    max-width: 582px;
+    margin-left: auto;
+  }
+
+  &__img-block {
+    margin-bottom: 13px;
+  }
+
+  &__device-name {
+    @include font(14px, 22px);
+    color: $text-main;
+    margin: 0 0 53px;
+    text-align: center;
+  }
+
+  &__payment {
+    display: flex;
+    margin: 0 0 22px 98px;
+  }
+
+  &__payment-first {
+    margin-right: 25px;
+    text-align: center;
+  }
+
+  &__payment-note {
+    @include font(16px, 24px);
+    color: $text-main;
+    margin: 0;
+  }
+
+  &__payment-first-value {
+    @include font(26px, 26px, 400);
+    color: $text-main;
+    margin: 17px 0 0;
+  }
+
+  &__payment-subscribe {
+    text-align: center;
+  }
+
+  &__payment-subscribe-value {
+    margin: 6px 0 0;
+    @include font(24px, 24px, 400);
+    color: #fff;
+    padding: 12px 16px;
+    background: linear-gradient(136.91deg, #00ADEB 2.26%, #DF61FE 100.52%);
+    border-radius: 8px;
+  }
+
+  &__subscription-desc {
+    @include font(14px, 22px);
+    color: $text-main;
+    max-width: 380px;
+    margin: 0 0 24px 98px;
+  }
+
+  &__payment-link {
+    display: inline-block;
+    padding-left: 31px;
+    padding-right: 31px;
+    margin-left: 98px;
+  }
+}

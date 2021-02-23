@@ -1,0 +1,66 @@
+.catalog {
+  padding-top: 80px;
+  padding-bottom: 90px;
+  background-color: #F4F4F8;
+
+  &__title {
+    @include font(48px, 56px);
+    color: $text-main;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+  }
+
+  &__filters-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__filters-item {
+    &:not(:last-child) {
+      margin-right: 64px;
+    }
+  }
+
+  &__filters-label {
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--all {
+      padding-left: 17px;
+      padding-right: 17px;
+    }
+
+    &--daichi {
+      display: block;
+      width: 91px;
+      height: 40px;
+      background-image: url("../img/daichi-grey.svg");
+    }
+
+    &--daikin {
+      display: block;
+      width: 109px;
+      height: 40px;
+      background-image: url("../img/daikin-grey.svg");
+    }
+
+    &--bosch {
+      display: block;
+      width: 103px;
+      height: 40px;
+      background-image: url("../img/bosch-grey.svg");
+    }
+
+    &--midea {
+      display: block;
+      width: 104px;
+      height: 64px;
+      background-image: url("../img/midea-grey.svg");
+    }
+  }
+}

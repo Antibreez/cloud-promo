@@ -1,0 +1,98 @@
+.mobile-control {
+  margin-bottom: 116px;
+
+  &__title {
+    margin: 0 0 46px;
+  }
+
+  &__body {
+    position: relative;
+    padding: 102px 53% 83px 64px;
+    border-radius: 16px;
+    background-color: #F4F4F8;
+    min-height: 680px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 48px;
+      right: 48px;
+      width: 42px;
+      height: 42px;
+      background-image: url("../img/app-icon.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__list {
+    margin: 0 0 87px;
+    padding: 0;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin: 0 0 32px;
+    }
+  }
+
+  &__item-text {
+    @include font(16px, 24px, 400);
+    color: #A6AFBE;
+    display: flex;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    & span:first-child {
+      flex-shrink: 0;
+      margin-right: 24px;
+    }
+  }
+
+  &__item-radio {
+    &:checked + label {
+      color: $text-main;
+    }
+
+    &:checked + label + .mobile-control__item-img {
+      display: block;
+    }
+  }
+
+  &__item-img {
+    display: none;
+    position: absolute;
+    top: 56px;
+    right: 25%;
+    width: 296px;
+    height: 556px;
+    transform: translateX(50%);
+  }
+
+  &__app-block {
+    display: flex;
+  }
+
+  &__app-link {
+    width: 174px;
+    height: 64px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:first-child {
+      margin-right: 16px;
+    }
+
+    &--appstore {
+      background-image: url("../img/appstore-icon.svg");
+    }
+
+    &--googleplay {
+      background-image: url("../img/googleplay-icon.svg");
+    }
+  }
+}

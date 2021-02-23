@@ -1,0 +1,42 @@
+.all-benefits {
+  padding-top: 90px;
+  padding-bottom: 70px;
+
+  &__title {
+    @include font(40px, 48px);
+    color: $text-main;
+    margin: 0 0 56px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-height: 432px;
+  }
+
+  &__item {
+    @include font(16px, 24px, 400);
+    color: $text-main;
+    position: relative;
+    max-width: 547px;
+    padding: 10px 0 0 75px;
+    margin: 0 0 32px;
+
+    & span:first-child {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      color: #fff;
+      border-radius: 50%;
+      background: linear-gradient(136.91deg, #00ADEB 2.26%, #DF61FE 100.52%);
+    }
+  }
+}
