@@ -1,0 +1,189 @@
+.device-card {
+  width: 400px;
+  background-color: #fff;
+  border-radius: 16px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  height: 100%;
+
+  &__brand {
+    &--daichi {
+      margin-top: -11px;
+      margin-left: 24px;
+    }
+  }
+
+  &__img-box {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  &__series {
+    @include font(20px, 24px);
+    color: $text-main;
+    margin: 0 0 32px;
+    text-align: center;
+    padding: 0 24px;
+  }
+
+  &__benefits {
+    margin: 0 0 16px;
+    padding: 0 24px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__benefit {
+    width: 100%;
+    @include font(14px, 20px, 400);
+    color: $text-main;
+    padding-right: 24px;
+    position: relative;
+    margin-bottom: 8px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 24px;
+      height: 24px;
+      background-image: url("../img/check.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__retail {
+    border-top: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    padding: 10px 24px 15px;
+    display: flex;
+  }
+
+  &__subscribe {
+    display: flex;
+    padding: 16px 24px 24px;
+  }
+
+  &__retail-type,
+  &__subscribe-type {
+    @include font(12px, 16px, 400);
+    margin: 0;
+    margin-right: 20px;
+    padding-top: 12px;
+    max-width: 90px;
+  }
+
+  &__retail-price-title,
+  &__subscribe-payment-title,
+  &__subscribe-first-payment-title {
+    @include font(12px, 24px);
+    margin: 0;
+    color: $text-minor;
+  }
+
+  &__retail-price {
+    position: relative;
+    @include font(16px, 24px, 400);
+    color: $text-minor;
+    margin: 0;
+    text-decoration: line-through;
+
+    & span {
+      font-size: 14px;
+    }
+
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   top: 50%;
+    //   left: -2px;
+    //   height: 1px;
+    //   width: 92px;
+    //   background-color: #F1302D;
+    //   transform-origin: center;
+    //   transform: rotate(-13deg);
+    // }
+  }
+
+  &__subscribe-first-payment-block {
+    margin-right: 28px;
+  }
+
+  &__subscribe-first-payment {
+    @include font(18px, 24px, 400);
+    margin: 0;
+    color: $text-main;
+
+    & span {
+      font-size: 14px;
+    }
+  }
+
+  &__subscribe-payment {
+    @include font(18px, 24px, 400);
+    margin: 0;
+    color: $text-main;
+
+    & span {
+      font-size: 14px;
+    }
+  }
+
+  &__subscribe-info-icon {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background-image: url("../img/alert.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__subscribe-info-btn {
+    @include btn-reset;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+
+  &__subscribe-tooltip {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+    width: 153px;
+    transform: translate(-50%, calc(-100% - 11px));
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0s ease 0.3s;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 17px;
+      height: 11px;
+      background-image: url("../img/tail.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      transform: translate(-50%, 11px);
+    }
+  }
+
+  &__subscribe-info-icon:hover .device-card__subscribe-tooltip {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+  }
+
+  &__payment-link {
+    margin: 0 24px;
+    display: block;
+  }
+}

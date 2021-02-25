@@ -1,10 +1,8 @@
 .how-it-works {
   padding-top: 120px;
-  margin-bottom: 290px;
 
   &__container {
-    padding-bottom: 100px;
-    border-bottom: 1px solid #DDDDDD;
+    padding-bottom: 72px;
   }
 
   &__title {
@@ -15,6 +13,7 @@
 
   &__body {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__left-side {
@@ -52,7 +51,7 @@
       justify-content: center;
       flex-shrink: 0;
       border-radius: 50%;
-      background-color: #D1D8E1;
+      background: linear-gradient(115.18deg, #F0EDFE 9.16%, #D6EBFF 84.65%), #F6F6F6;
     }
 
     & span:last-child {
@@ -60,33 +59,38 @@
     }
   }
 
+  &__service-block {
+    margin-top: 48px;
+  }
+
   &__service-note {
-    @include font(24px, 36px, 400);
+    @include font(24px, 36px);
     color: $text-main;
-    margin: 0 0 24px;
+    margin: 0 0 36px;
   }
 
   &__service-list {
     margin: 0;
     padding: 0;
+    display: flex;
   }
 
   &__service-item {
-    @include font(16px, 24px, 400);
+    @include font(16px, 24px);
     position: relative;
     color: $text-main;
-    padding-left: 72px;
-    max-width: 419px;
+    padding-left: 40px;
+    width: 280px;
 
     &:not(:last-child) {
-      margin-bottom: 24px;
+      margin-right: 38px;
     }
 
     &::before {
       content: "";
       position: absolute;
       top: 0;
-      left: 14px;
+      left: 0;
       width: 24px;
       height: 24px;
       background-image: url("../img/check.svg");
@@ -114,7 +118,8 @@
 
   &__payment {
     display: flex;
-    margin: 0 0 22px 98px;
+    justify-content: center;
+    margin: 0 auto 22px;
   }
 
   &__payment-first {
@@ -129,7 +134,7 @@
   }
 
   &__payment-first-value {
-    @include font(26px, 26px, 400);
+    @include font(20px, 24px, 400);
     color: $text-main;
     margin: 17px 0 0;
   }
@@ -140,24 +145,26 @@
 
   &__payment-subscribe-value {
     margin: 6px 0 0;
-    @include font(24px, 24px, 400);
-    color: #fff;
-    padding: 12px 16px;
-    background: linear-gradient(136.91deg, #00ADEB 2.26%, #DF61FE 100.52%);
-    border-radius: 8px;
+    @include font(20px, 24px, 400);
+    color: $text-main;
+    padding: 16px 20px;
+    background: linear-gradient(115.18deg, #F0EDFE 9.16%, #D6EBFF 84.65%);
+    border-radius: 5px;
   }
 
   &__subscription-desc {
     @include font(14px, 22px);
     color: $text-main;
     max-width: 380px;
-    margin: 0 0 24px 98px;
+    text-align: center;
+    margin: 0 auto 24px;
   }
 
   &__payment-link {
-    display: inline-block;
-    padding-left: 31px;
-    padding-right: 31px;
-    margin-left: 98px;
+    display: block;
+    width: fit-content;
+    padding-left: 34px;
+    padding-right: 34px;
+    margin: 0 auto;
   }
 }

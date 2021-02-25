@@ -1,24 +1,20 @@
 .cloud-advantages {
-  margin-bottom: 91px;
-
-  &__container {
-    padding-bottom: 124px;
-    border-bottom: 1px solid #dddddd;
-  }
+  padding-top: 138px;
+  padding-bottom: 122px;
 
   &__diagnostics {
     min-height: 320px;
-    padding: 10px 58% 0 0;
+    padding: 44px 58% 0 0;
     background-image: url("../img/diagnostics.svg");
     background-repeat: no-repeat;
     background-position: top right 96px;
-    margin: 0 0 147px;
+    margin: 0 0 161px;
   }
 
   &__title {
-    @include font(32px, 36px);
+    @include font(28px, 32px);
     color: $text-main;
-    max-width: 616px;
+    max-width: 460px;
     margin: 0 0 40px;
   }
 
@@ -29,9 +25,9 @@
 
   &__comfort-payment {
     min-height: 226px;
-    padding: 10px 0 0 58%;
+    padding: 10px 58% 0 0;
     background-image: url("../img/comfort-payment.svg");
     background-repeat: no-repeat;
-    background-position: top left 78px;
+    background-position: top right 176px;
   }
 }

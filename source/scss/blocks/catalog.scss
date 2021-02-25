@@ -11,6 +11,10 @@
     text-align: center;
   }
 
+  &__filters {
+    margin-bottom: 64px;
+  }
+
   &__filters-list {
     margin: 0;
     padding: 0;
@@ -26,6 +30,11 @@
   }
 
   &__filters-label {
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+
     &:hover {
       cursor: pointer;
     }
@@ -35,32 +44,70 @@
       padding-right: 17px;
     }
 
-    &--daichi {
-      display: block;
-      width: 91px;
-      height: 40px;
-      background-image: url("../img/daichi-grey.svg");
-    }
+    // &--daichi {
+    //   display: block;
+    //   width: 91px;
+    //   height: 40px;
+    //   background-image: url("../img/daichi-grey.svg");
 
-    &--daikin {
-      display: block;
-      width: 109px;
-      height: 40px;
-      background-image: url("../img/daikin-grey.svg");
-    }
+    //   &:hover {
+    //     background-image: url("../img/daichi-color.svg");
+    //   }
+    // }
 
-    &--bosch {
-      display: block;
-      width: 103px;
-      height: 40px;
-      background-image: url("../img/bosch-grey.svg");
-    }
+    // &--daikin {
+    //   display: block;
+    //   width: 109px;
+    //   height: 40px;
+    //   background-image: url("../img/daikin-grey.svg");
+    // }
 
-    &--midea {
-      display: block;
-      width: 104px;
-      height: 64px;
-      background-image: url("../img/midea-grey.svg");
+    // &--bosch {
+    //   display: block;
+    //   width: 103px;
+    //   height: 40px;
+    //   background-image: url("../img/bosch-grey.svg");
+    // }
+
+    // &--midea {
+    //   display: block;
+    //   width: 104px;
+    //   height: 64px;
+    //   background-image: url("../img/midea-grey.svg");
+    // }
+  }
+
+  &__filter-icon-grey {
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+
+  &__filter-icon-color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  &__filters-label:hover .catalog__filter-icon-grey {
+    opacity: 0;
+  }
+
+  &__filters-label:hover .catalog__filter-icon-color {
+    opacity: 1;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    &:not(:nth-child(3n)) {
+      margin-right: 24px;
     }
   }
 }

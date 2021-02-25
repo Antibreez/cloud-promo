@@ -1,6 +1,5 @@
 .all-benefits {
-  padding-top: 90px;
-  padding-bottom: 70px;
+  padding-top: 185px;
 
   &__title {
     @include font(40px, 48px);
@@ -34,9 +33,9 @@
       justify-content: center;
       width: 40px;
       height: 40px;
-      color: #fff;
+      color: $text-main;
       border-radius: 50%;
-      background: linear-gradient(136.91deg, #00ADEB 2.26%, #DF61FE 100.52%);
+      background: linear-gradient(136.91deg, rgba(0, 173, 235, 0.2) 2.26%, rgba(223, 97, 254, 0.2) 100.52%);
     }
   }
 }

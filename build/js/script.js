@@ -84,6 +84,30 @@
 })();
 
 (function () {
+  var items = document.querySelectorAll('.mobile-control__item-text');
+
+  var onItemsClick = function onItemsClick(e) {
+    e.preventDefault();
+  };
+
+  var onItemOver = function onItemOver(e) {
+    var target = e.currentTarget;
+    target.classList.add('hovered');
+  };
+
+  var onItemLeave = function onItemLeave(e) {
+    var target = e.currentTarget;
+    target.classList.remove('hovered');
+  };
+
+  items.forEach(function (item) {
+    item.addEventListener('click', onItemsClick);
+    item.addEventListener('mouseenter', onItemOver);
+    item.addEventListener('mouseleave', onItemLeave);
+  });
+})();
+
+(function () {
   var headerBar = document.querySelector('.header__bar-mobile');
   var isScrolled = window.pageYOffset > 100;
 
