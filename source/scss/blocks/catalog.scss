@@ -3,6 +3,10 @@
   padding-bottom: 90px;
   background-color: #F4F4F8;
 
+  &__container {
+    padding-right: 71px;
+  }
+
   &__title {
     @include font(48px, 56px);
     color: $text-main;
@@ -90,11 +94,13 @@
     transition: opacity 0.3s;
   }
 
-  &__filters-label:hover .catalog__filter-icon-grey {
+  &__filters-radio:checked + .catalog__filters-label
+  .catalog__filter-icon-grey {
     opacity: 0;
   }
 
-  &__filters-label:hover .catalog__filter-icon-color {
+  &__filters-radio:checked + .catalog__filters-label
+  .catalog__filter-icon-color {
     opacity: 1;
   }
 
@@ -106,8 +112,15 @@
   }
 
   &__item {
-    &:not(:nth-child(3n)) {
-      margin-right: 24px;
+    position: relative;
+    width: 400px;
+    margin-bottom: 24px;
+    min-height: 365px;
+
+    &.hidden {
+      display: none;
     }
+
+    margin-right: 24px;
   }
 }

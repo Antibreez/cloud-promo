@@ -1,29 +1,32 @@
 .mobile-control {
-  margin-bottom: 116px;
+  position: relative;
+  margin-bottom: 30px;
 
   &__title {
-    margin: 0 0 46px;
-  }
-
-  &__body {
     position: relative;
-    padding: 102px 53% 83px 64px;
-    border-radius: 16px;
-    background-color: #F4F4F8;
-    min-height: 680px;
+    margin: 0 0 46px;
+    max-width: 616px;
+    //padding-right: 70px;
 
     &::after {
       content: "";
-      position: absolute;
-      top: 48px;
-      right: 48px;
+      //position: absolute;
+      // top: 48px;
+      // right: 48px;
+      display: inline-block;
       width: 42px;
       height: 42px;
+      margin-left: 10px;
+      vertical-align: middle;
       background-image: url("../img/app-icon.svg");
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
     }
+  }
+
+  &__body {
+    padding: 0 59% 83px 0;
   }
 
   &__list {
@@ -79,7 +82,7 @@
     visibility: hidden;
     opacity: 0;
     position: absolute;
-    top: 56px;
+    top: 0;
     right: 25%;
     width: 296px;
     height: 556px;

@@ -5089,9 +5089,10 @@ a {
 }
 
 .header {
-  background-image: url("../img/header-bg.jpg");
+  background: url("../img/header-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom center;
   min-height: calc(var(--vh, 1vh) * 100);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5483,7 +5484,10 @@ a {
 
 .cloud-advantages {
   padding-top: 138px;
-  padding-bottom: 122px;
+  padding-bottom: 90px;
+  background-image: url("../img/spots-bg.png");
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 
 .cloud-advantages__diagnostics {
@@ -5520,32 +5524,31 @@ a {
 }
 
 .mobile-control {
-  margin-bottom: 116px;
+  position: relative;
+  margin-bottom: 30px;
 }
 
 .mobile-control__title {
-  margin: 0 0 46px;
-}
-
-.mobile-control__body {
   position: relative;
-  padding: 102px 53% 83px 64px;
-  border-radius: 16px;
-  background-color: #F4F4F8;
-  min-height: 680px;
+  margin: 0 0 46px;
+  max-width: 616px;
 }
 
-.mobile-control__body::after {
+.mobile-control__title::after {
   content: "";
-  position: absolute;
-  top: 48px;
-  right: 48px;
+  display: inline-block;
   width: 42px;
   height: 42px;
+  margin-left: 10px;
+  vertical-align: middle;
   background-image: url("../img/app-icon.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.mobile-control__body {
+  padding: 0 59% 83px 0;
 }
 
 .mobile-control__list {
@@ -5594,7 +5597,7 @@ a {
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  top: 56px;
+  top: 0;
   right: 25%;
   width: 296px;
   height: 556px;
@@ -5694,6 +5697,10 @@ a {
   background-color: #F4F4F8;
 }
 
+.catalog__container {
+  padding-right: 71px;
+}
+
 .catalog__title {
   font-size: 48px;
   line-height: 56px;
@@ -5757,11 +5764,13 @@ a {
   transition: opacity 0.3s;
 }
 
-.catalog__filters-label:hover .catalog__filter-icon-grey {
+.catalog__filters-radio:checked + .catalog__filters-label
+.catalog__filter-icon-grey {
   opacity: 0;
 }
 
-.catalog__filters-label:hover .catalog__filter-icon-color {
+.catalog__filters-radio:checked + .catalog__filters-label
+.catalog__filter-icon-color {
   opacity: 1;
 }
 
@@ -5775,27 +5784,61 @@ a {
       flex-wrap: wrap;
 }
 
-.catalog__item:not(:nth-child(3n)) {
+.catalog__item {
+  position: relative;
+  width: 400px;
+  margin-bottom: 24px;
+  min-height: 365px;
   margin-right: 24px;
 }
 
-.device-card {
-  width: 400px;
-  background-color: #fff;
-  border-radius: 16px;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  height: 100%;
+.catalog__item.hidden {
+  display: none;
 }
 
-.device-card__brand--daichi {
-  margin-top: -11px;
-  margin-left: 24px;
+.device-card {
+  position: relative;
+  width: 400px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding-top: 48px;
+  padding-bottom: 26px;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+}
+
+.device-card__brand {
+  position: absolute;
+  top: 16px;
+  left: 24px;
+}
+
+.device-card__brand--midea {
+  margin-top: -5px;
+}
+
+.device-card__wifi-icon {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  position: absolute;
+  top: 19px;
+  right: 24px;
+  margin: 0;
+  padding: 8px 12px;
+  color: #000;
+  background: linear-gradient(115.18deg, #F0EDFE 9.16%, #D6EBFF 84.65%), #FFFFFF;
+  border-radius: 5px;
 }
 
 .device-card__img-box {
   max-width: 320px;
   margin: 0 auto;
+  min-height: 212px;
+  font-size: 0;
+  line-height: 0;
 }
 
 .device-card__series {
@@ -5803,14 +5846,35 @@ a {
   line-height: 24px;
   font-weight: 300;
   color: #000;
-  margin: 0 0 32px;
+  margin: 0 0 16px;
   text-align: center;
   padding: 0 24px;
 }
 
+.device-card__additional-info {
+  display: none;
+}
+
+.device-card:hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  -webkit-box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.16);
+}
+
+.device-card:hover .device-card__additional-info {
+  display: block;
+}
+
+.device-card:hover .device-card__price {
+  display: none;
+}
+
 .device-card__benefits {
   margin: 0 0 16px;
-  padding: 0 24px;
+  padding: 20px 24px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5893,7 +5957,7 @@ a {
   margin-right: 28px;
 }
 
-.device-card__subscribe-first-payment {
+.device-card__subscribe-first-payment, .device-card__price {
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -5901,8 +5965,14 @@ a {
   color: #000;
 }
 
-.device-card__subscribe-first-payment span {
+.device-card__subscribe-first-payment span, .device-card__price span {
   font-size: 14px;
+}
+
+.device-card__price {
+  margin-bottom: 14px;
+  padding: 0 24px;
+  text-align: center;
 }
 
 .device-card__subscribe-payment {

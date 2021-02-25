@@ -164,7 +164,7 @@
       <div class="cloud-advantages__container wrapper">
         <div class="cloud-advantages__mobile-control  mobile-control">
           <h2 class="cloud-advantages__title  mobile-control__title">
-            Облачный — значит легкий, благодаря мобильному управлению
+            Облачный — значит легкий,<br> благодаря мобильному управлению
           </h2>
           <div class="mobile-control__body">
             <ul class="mobile-control__list">
@@ -347,7 +347,7 @@
         <div class="catalog__filters">
           <ul class="catalog__filters-list">
             <li class="catalog__filters-item">
-              <input type="radio" id="filters-all" class="catalog__filters-radio  visually-hidden" name="brand" value="all">
+              <input type="radio" id="filters-all" class="catalog__filters-radio  visually-hidden" name="brand" value="all" checked>
               <label for="filters-all" class="catalog__filters-label catalog__filters-label--all  btn-small">Все</label>
             </li>
             <li class="catalog__filters-item">
@@ -403,12 +403,15 @@
 
         <div class="catalog__box">
           <ul class="catalog__list">
-            <li class="catalog__item">
+            <li class="catalog__item" data-brand="daichi">
               <div class="device-card">
                 <div class="device-card__brand  device-card__brand--daichi">
                   <svg class="device-card__brand-icon" width="72" height="32">
                     <use xlink:href="#daichi-color"></use>
                   </svg>
+                </div>
+                <div class="device-card__wifi-icon">
+                  Wi-Fi управление
                 </div>
                 <div class="device-card__img-box">
                   <picture class="device-card__img-picture">
@@ -417,103 +420,594 @@
                   </picture>
                 </div>
                 <p class="device-card__series">Daichi Alpha</p>
-                <ul class="device-card__benefits">
-                  <li class="device-card__benefit">Гарантия 3 года + 1</li>
-                  <li class="device-card__benefit">Обогрев зимой до -20°C</li>
-                  <li class="device-card__benefit">Инверторный компрессор</li>
-                  <li class="device-card__benefit">Функция самоочистки</li>
-                </ul>
-                <div class="device-card__retail">
-                  <p class="device-card__retail-type">Обычный кондиционер</p>
-                  <div class="device-card__retail-price-block">
-                    <p class="device-card__retail-price-title">Розничная цена</p>
-                    <p class="device-card__retail-price">16 990 <span>руб</spa></p>
+                <p class="device-card__price">2 799 <span>руб/год</span></p>
+                <div class="device-card__additional-info">
+                  <ul class="device-card__benefits">
+                    <li class="device-card__benefit">Гарантия 3 года + 1</li>
+                    <li class="device-card__benefit">Обогрев зимой до -20°C</li>
+                    <li class="device-card__benefit">Инверторный компрессор</li>
+                    <li class="device-card__benefit">Функция самоочистки</li>
+                  </ul>
+                  <div class="device-card__retail">
+                    <p class="device-card__retail-type">Обычный кондиционер</p>
+                    <div class="device-card__retail-price-block">
+                      <p class="device-card__retail-price-title">Розничная цена</p>
+                      <p class="device-card__retail-price">16 990 <span>руб</spa></p>
+                    </div>
                   </div>
-                </div>
-                <div class="device-card__subscribe">
-                  <p class="device-card__subscribe-type">Облачный кондиционер</p>
-                  <div class="device-card__subscribe-first-payment-block">
-                    <p class="device-card__subscribe-first-payment-title">Первый взнос</p>
-                    <p class="device-card__subscribe-first-payment">7 990 <span>руб</span></p>
-                  </div>
-                  <div class="device-card__subscribe-payment-block">
-                    <p class="device-card__subscribe-payment-title">
-                      Подписка
-                      <button class="device-card__subscribe-info-btn">
-                        <span class="visually-hidden">Дополнительная информация</span>
-                        <div class="device-card__subscribe-info-icon">
-                          <div class="device-card__subscribe-tooltip">
-                            Оплата подписки прекращается через 7 лет
+                  <div class="device-card__subscribe">
+                    <p class="device-card__subscribe-type">Облачный кондиционер</p>
+                    <div class="device-card__subscribe-first-payment-block">
+                      <p class="device-card__subscribe-first-payment-title">Первый взнос</p>
+                      <p class="device-card__subscribe-first-payment">7 990 <span>руб</span></p>
+                    </div>
+                    <div class="device-card__subscribe-payment-block">
+                      <p class="device-card__subscribe-payment-title">
+                        Подписка
+                        <button class="device-card__subscribe-info-btn">
+                          <span class="visually-hidden">Дополнительная информация</span>
+                          <div class="device-card__subscribe-info-icon">
+                            <div class="device-card__subscribe-tooltip">
+                              Оплата подписки прекращается через 7 лет
+                            </div>
                           </div>
-                        </div>
-                      </button>
-                    </p>
-                    <p class="device-card__subscribe-payment">2 799 <span>руб/год</span></p>
+                        </button>
+                      </p>
+                      <p class="device-card__subscribe-payment">2 799 <span>руб/год</span></p>
+                    </div>
                   </div>
+                  <a href="#" class="device-card__payment-link btn-primary">Заплатить сейчас 10 789 руб</a>
                 </div>
-                <a href="#" class="device-card__payment-link btn-primary">Заплатить сейчас 10 789 руб</a>
               </div>
             </li>
 
-            <li class="catalog__item">
+            <li class="catalog__item" data-brand="daichi">
               <div class="device-card">
-                <div class="device-card__brand"></div>
+                <div class="device-card__brand  device-card__brand--daichi">
+                  <svg class="device-card__brand-icon" width="72" height="32">
+                    <use xlink:href="#daichi-color"></use>
+                  </svg>
+                </div>
+                <div class="device-card__wifi-icon">
+                  Wi-Fi управление
+                </div>
                 <div class="device-card__img-box">
-                  <img src="" alt="">
+                  <img src="img/air-catalog.png" alt="Daichi Air">
                 </div>
-                <p class="device-card__series"></p>
-                <ul class="device-card__benefits">
-                  <li class="device-card__benefit"></li>
-                  <li class="device-card__benefit"></li>
-                  <li class="device-card__benefit"></li>
-                  <li class="device-card__benefit"></li>
-                </ul>
-                <div class="device-card__retail">
-                  <p class="device-card__retail-type"></p>
-                  <div class="device-card__retail-price-block">
-                    <p class="device-card__retail-price-title"></p>
-                    <p class="device-card__retail-price"></p>
+                <p class="device-card__series">Daichi Air</p>
+                <p class="device-card__price">2 799 <span>руб/год</span></p>
+                <div class="device-card__additional-info">
+                  <ul class="device-card__benefits">
+                    <li class="device-card__benefit">Гарантия 3 года + 1</li>
+                    <li class="device-card__benefit">Обогрев зимой до -20°C</li>
+                    <li class="device-card__benefit">Инверторный компрессор</li>
+                    <li class="device-card__benefit">Функция самоочистки</li>
+                  </ul>
+                  <div class="device-card__retail">
+                    <p class="device-card__retail-type">Обычный кондиционер</p>
+                    <div class="device-card__retail-price-block">
+                      <p class="device-card__retail-price-title">Розничная цена</p>
+                      <p class="device-card__retail-price">16 990 <span>руб</spa></p>
+                    </div>
                   </div>
-                </div>
-                <div class="device-card__subscribe">
-                  <p class="device-card__subscribe-type"></p>
-                  <div class="device-card__subscribe-price-block">
-                    <p class="device-card__subscribe-price-title"></p>
-                    <p class="device-card__subscribe-price"></p>
+                  <div class="device-card__subscribe">
+                    <p class="device-card__subscribe-type">Облачный кондиционер</p>
+                    <div class="device-card__subscribe-first-payment-block">
+                      <p class="device-card__subscribe-first-payment-title">Первый взнос</p>
+                      <p class="device-card__subscribe-first-payment">7 990 <span>руб</span></p>
+                    </div>
+                    <div class="device-card__subscribe-payment-block">
+                      <p class="device-card__subscribe-payment-title">
+                        Подписка
+                        <button class="device-card__subscribe-info-btn">
+                          <span class="visually-hidden">Дополнительная информация</span>
+                          <div class="device-card__subscribe-info-icon">
+                            <div class="device-card__subscribe-tooltip">
+                              Оплата подписки прекращается через 7 лет
+                            </div>
+                          </div>
+                        </button>
+                      </p>
+                      <p class="device-card__subscribe-payment">2 799 <span>руб/год</span></p>
+                    </div>
                   </div>
+                  <a href="#" class="device-card__payment-link btn-primary">Заплатить сейчас 10 789 руб</a>
                 </div>
-                <a href="#" class="device-card__payment-link btn-primary"></a>
               </div>
             </li>
 
-            <li class="catalog__item">
+            <li class="catalog__item" data-brand="daichi">
               <div class="device-card">
-                <div class="device-card__brand"></div>
+                <div class="device-card__brand  device-card__brand--daichi">
+                  <svg class="device-card__brand-icon" width="72" height="32">
+                    <use xlink:href="#daichi-color"></use>
+                  </svg>
+                </div>
+                <div class="device-card__wifi-icon">
+                  Wi-Fi управление
+                </div>
                 <div class="device-card__img-box">
-                  <img src="" alt="">
+                  <img src="img/x-treme-peak-catalog.png" alt="Daichi XTREME Peak">
                 </div>
-                <p class="device-card__series"></p>
-                <ul class="device-card__benefits">
-                  <li class="device-card__benefit"></li>
-                  <li class="device-card__benefit"></li>
-                  <li class="device-card__benefit"></li>
-                  <li class="device-card__benefit"></li>
-                </ul>
-                <div class="device-card__retail">
-                  <p class="device-card__retail-type"></p>
-                  <div class="device-card__retail-price-block">
-                    <p class="device-card__retail-price-title"></p>
-                    <p class="device-card__retail-price"></p>
+                <p class="device-card__series">Daichi XTREME Peak</p>
+                <p class="device-card__price">2 799 <span>руб/год</span></p>
+                <div class="device-card__additional-info">
+                  <ul class="device-card__benefits">
+                    <li class="device-card__benefit">Гарантия 3 года + 1</li>
+                    <li class="device-card__benefit">Обогрев зимой до -20°C</li>
+                    <li class="device-card__benefit">Инверторный компрессор</li>
+                    <li class="device-card__benefit">Функция самоочистки</li>
+                  </ul>
+                  <div class="device-card__retail">
+                    <p class="device-card__retail-type">Обычный кондиционер</p>
+                    <div class="device-card__retail-price-block">
+                      <p class="device-card__retail-price-title">Розничная цена</p>
+                      <p class="device-card__retail-price">16 990 <span>руб</spa></p>
+                    </div>
                   </div>
-                </div>
-                <div class="device-card__subscribe">
-                  <p class="device-card__subscribe-type"></p>
-                  <div class="device-card__subscribe-price-block">
-                    <p class="device-card__subscribe-price-title"></p>
-                    <p class="device-card__subscribe-price"></p>
+                  <div class="device-card__subscribe">
+                    <p class="device-card__subscribe-type">Облачный кондиционер</p>
+                    <div class="device-card__subscribe-first-payment-block">
+                      <p class="device-card__subscribe-first-payment-title">Первый взнос</p>
+                      <p class="device-card__subscribe-first-payment">7 990 <span>руб</span></p>
+                    </div>
+                    <div class="device-card__subscribe-payment-block">
+                      <p class="device-card__subscribe-payment-title">
+                        Подписка
+                        <button class="device-card__subscribe-info-btn">
+                          <span class="visually-hidden">Дополнительная информация</span>
+                          <div class="device-card__subscribe-info-icon">
+                            <div class="device-card__subscribe-tooltip">
+                              Оплата подписки прекращается через 7 лет
+                            </div>
+                          </div>
+                        </button>
+                      </p>
+                      <p class="device-card__subscribe-payment">2 799 <span>руб/год</span></p>
+                    </div>
                   </div>
+                  <a href="#" class="device-card__payment-link btn-primary">Заплатить сейчас 10 789 руб</a>
                 </div>
-                <a href="#" class="device-card__payment-link btn-primary"></a>
+              </div>
+            </li>
+
+            <li class="catalog__item" data-brand="daikin">
+              <div class="device-card">
+                <div class="device-card__brand  device-card__brand--daikin">
+                  <svg class="device-card__brand-icon" width="88" height="32">
+                    <use xlink:href="#daikin-color"></use>
+                  </svg>
+                </div>
+                <div class="device-card__wifi-icon">
+                  Wi-Fi управление
+                </div>
+                <div class="device-card__img-box">
+                  <img src="img/comfora-catalog.png" alt="Daikin Comfora">
+                </div>
+                <p class="device-card__series">Daikin Comfora</p>
+                <p class="device-card__price">2 799 <span>руб/год</span></p>
+                <div class="device-card__additional-info">
+                  <ul class="device-card__benefits">
+                    <li class="device-card__benefit">Гарантия 3 года + 1</li>
+                    <li class="device-card__benefit">Обогрев зимой до -20°C</li>
+                    <li class="device-card__benefit">Инверторный компрессор</li>
+                    <li class="device-card__benefit">Функция самоочистки</li>
+                  </ul>
+                  <div class="device-card__retail">
+                    <p class="device-card__retail-type">Обычный кондиционер</p>
+                    <div class="device-card__retail-price-block">
+                      <p class="device-card__retail-price-title">Розничная цена</p>
+                      <p class="device-card__retail-price">16 990 <span>руб</spa></p>
+                    </div>
+                  </div>
+                  <div class="device-card__subscribe">
+                    <p class="device-card__subscribe-type">Облачный кондиционер</p>
+                    <div class="device-card__subscribe-first-payment-block">
+                      <p class="device-card__subscribe-first-payment-title">Первый взнос</p>
+                      <p class="device-card__subscribe-first-payment">7 990 <span>руб</span></p>
+                    </div>
+                    <div class="device-card__subscribe-payment-block">
+                      <p class="device-card__subscribe-payment-title">
+                        Подписка
+                        <button class="device-card__subscribe-info-btn">
+                          <span class="visually-hidden">Дополнительная информация</span>
+                          <div class="device-card__subscribe-info-icon">
+                            <div class="device-card__subscribe-tooltip">
+                              Оплата подписки прекращается через 7 лет
+                            </div>
+                          </div>
+                        </button>
+                      </p>
+                      <p class="device-card__subscribe-payment">2 799 <span>руб/год</span></p>
+                    </div>
+                  </div>
+                  <a href="#" class="device-card__payment-link btn-primary">Заплатить сейчас 10 789 руб</a>
+                </div>
+              </div>
+            </li>
+
+            <li class="catalog__item" data-brand="daikin">
+              <div class="device-card">
+                <div class="device-card__brand  device-card__brand--daikin">
+                  <svg class="device-card__brand-icon" width="88" height="32">
+                    <use xlink:href="#daikin-color"></use>
+                  </svg>
+                </div>
+                <div class="device-card__wifi-icon">
+                  Wi-Fi управление
+                </div>
+                <div class="device-card__img-box">
+                  <img src="img/emura-catalog.png" alt="Daikin Emura">
+                </div>
+                <p class="device-card__series">Daikin Emura</p>
+                <p class="device-card__price">2 799 <span>руб/год</span></p>
+                <div class="device-card__additional-info">
+                  <ul class="device-card__benefits">
+                    <li class="device-card__benefit">Гарантия 3 года + 1</li>
+                    <li class="device-card__benefit">Обогрев зимой до -20°C</li>
+                    <li class="device-card__benefit">Инверторный компрессор</li>
+                    <li class="device-card__benefit">Функция самоочистки</li>
+                  </ul>
+                  <div class="device-card__retail">
+                    <p class="device-card__retail-type">Обычный кондиционер</p>
+                    <div class="device-card__retail-price-block">
+                      <p class="device-card__retail-price-title">Розничная цена</p>
+                      <p class="device-card__retail-price">16 990 <span>руб</spa></p>
+                    </div>
+                  </div>
+                  <div class="device-card__subscribe">
+                    <p class="device-card__subscribe-type">Облачный кондиционер</p>
+                    <div class="device-card__subscribe-first-payment-block">
+                      <p class="device-card__subscribe-first-payment-title">Первый взнос</p>
+                      <p class="device-card__subscribe-first-payment">7 990 <span>руб</span></p>
+                    </div>
+                    <div class="device-card__subscribe-payment-block">
+                      <p class="device-card__subscribe-payment-title">
+                        Подписка
+                        <button class="device-card__subscribe-info-btn">
+                          <span class="visually-hidden">Дополнительная информация</span>
+                          <div class="device-card__subscribe-info-icon">
+                            <div class="device-card__subscribe-tooltip">
+                              Оплата подписки прекращается через 7 лет
+                            </div>
+                          </div>
+                        </button>
+                      </p>
+                      <p class="device-card__subscribe-payment">2 799 <span>руб/год</span></p>
+                    </div>
+                  </div>
+                  <a href="#" class="device-card__payment-link btn-primary">Заплатить сейчас 10 789 руб</a>
+                </div>
+              </div>
+            </li>
+
+            <li class="catalog__item" data-brand="daikin">
+              <div class="device-card">
+                <div class="device-card__brand  device-card__brand--daikin">
+                  <svg class="device-card__brand-icon" width="88" height="32">
+                    <use xlink:href="#daikin-color"></use>
+                  </svg>
+                </div>
+                <div class="device-card__wifi-icon">
+                  Wi-Fi управление
+                </div>
+                <div class="device-card__img-box">
+                  <img src="img/ftxf-catalog.png" alt="Daikin FTXF">
+                </div>
+                <p class="device-card__series">Daikin FTXF</p>
+                <p class="device-card__price">2 799 <span>руб/год</span></p>
+                <div class="device-card__additional-info">
+                  <ul class="device-card__benefits">
+                    <li class="device-card__benefit">Гарантия 3 года + 1</li>
+                    <li class="device-card__benefit">Обогрев зимой до -20°C</li>
+                    <li class="device-card__benefit">Инверторный компрессор</li>
+                    <li class="device-card__benefit">Функция самоочистки</li>
+                  </ul>
+                  <div class="device-card__retail">
+                    <p class="device-card__retail-type">Обычный кондиционер</p>
+                    <div class="device-card__retail-price-block">
+                      <p class="device-card__retail-price-title">Розничная цена</p>
+                      <p class="device-card__retail-price">16 990 <span>руб</spa></p>
+                    </div>
+                  </div>
+                  <div class="device-card__subscribe">
+                    <p class="device-card__subscribe-type">Облачный кондиционер</p>
+                    <div class="device-card__subscribe-first-payment-block">
+                      <p class="device-card__subscribe-first-payment-title">Первый взнос</p>
+                      <p class="device-card__subscribe-first-payment">7 990 <span>руб</span></p>
+                    </div>
+                    <div class="device-card__subscribe-payment-block">
+                      <p class="device-card__subscribe-payment-title">
+                        Подписка
+                        <button class="device-card__subscribe-info-btn">
+                          <span class="visually-hidden">Дополнительная информация</span>
+                          <div class="device-card__subscribe-info-icon">
+                            <div class="device-card__subscribe-tooltip">
+                              Оплата подписки прекращается через 7 лет
+                            </div>
+                          </div>
+                        </button>
+                      </p>
+                      <p class="device-card__subscribe-payment">2 799 <span>руб/год</span></p>
+                    </div>
+                  </div>
+                  <a href="#" class="device-card__payment-link btn-primary">Заплатить сейчас 10 789 руб</a>
+                </div>
+              </div>
+            </li>
+
+            <li class="catalog__item" data-brand="daikin">
+              <div class="device-card">
+                <div class="device-card__brand  device-card__brand--daikin">
+                  <svg class="device-card__brand-icon" width="88" height="32">
+                    <use xlink:href="#daikin-color"></use>
+                  </svg>
+                </div>
+                <div class="device-card__wifi-icon">
+                  Wi-Fi управление
+                </div>
+                <div class="device-card__img-box">
+                  <img src="img/prefera-catalog.png" alt="Daikin Perfera">
+                </div>
+                <p class="device-card__series">Daikin Perfera</p>
+                <p class="device-card__price">2 799 <span>руб/год</span></p>
+                <div class="device-card__additional-info">
+                  <ul class="device-card__benefits">
+                    <li class="device-card__benefit">Гарантия 3 года + 1</li>
+                    <li class="device-card__benefit">Обогрев зимой до -20°C</li>
+                    <li class="device-card__benefit">Инверторный компрессор</li>
+                    <li class="device-card__benefit">Функция самоочистки</li>
+                  </ul>
+                  <div class="device-card__retail">
+                    <p class="device-card__retail-type">Обычный кондиционер</p>
+                    <div class="device-card__retail-price-block">
+                      <p class="device-card__retail-price-title">Розничная цена</p>
+                      <p class="device-card__retail-price">16 990 <span>руб</spa></p>
+                    </div>
+                  </div>
+                  <div class="device-card__subscribe">
+                    <p class="device-card__subscribe-type">Облачный кондиционер</p>
+                    <div class="device-card__subscribe-first-payment-block">
+                      <p class="device-card__subscribe-first-payment-title">Первый взнос</p>
+                      <p class="device-card__subscribe-first-payment">7 990 <span>руб</span></p>
+                    </div>
+                    <div class="device-card__subscribe-payment-block">
+                      <p class="device-card__subscribe-payment-title">
+                        Подписка
+                        <button class="device-card__subscribe-info-btn">
+                          <span class="visually-hidden">Дополнительная информация</span>
+                          <div class="device-card__subscribe-info-icon">
+                            <div class="device-card__subscribe-tooltip">
+                              Оплата подписки прекращается через 7 лет
+                            </div>
+                          </div>
+                        </button>
+                      </p>
+                      <p class="device-card__subscribe-payment">2 799 <span>руб/год</span></p>
+                    </div>
+                  </div>
+                  <a href="#" class="device-card__payment-link btn-primary">Заплатить сейчас 10 789 руб</a>
+                </div>
+              </div>
+            </li>
+
+            <li class="catalog__item" data-brand="daikin">
+              <div class="device-card">
+                <div class="device-card__brand  device-card__brand--daikin">
+                  <svg class="device-card__brand-icon" width="88" height="32">
+                    <use xlink:href="#daikin-color"></use>
+                  </svg>
+                </div>
+                <div class="device-card__wifi-icon">
+                  Wi-Fi управление
+                </div>
+                <div class="device-card__img-box">
+                  <img src="img/sensira-catalog.png" alt="Daikin Sensira">
+                </div>
+                <p class="device-card__series">Daikin Sensira</p>
+                <p class="device-card__price">2 799 <span>руб/год</span></p>
+                <div class="device-card__additional-info">
+                  <ul class="device-card__benefits">
+                    <li class="device-card__benefit">Гарантия 3 года + 1</li>
+                    <li class="device-card__benefit">Обогрев зимой до -20°C</li>
+                    <li class="device-card__benefit">Инверторный компрессор</li>
+                    <li class="device-card__benefit">Функция самоочистки</li>
+                  </ul>
+                  <div class="device-card__retail">
+                    <p class="device-card__retail-type">Обычный кондиционер</p>
+                    <div class="device-card__retail-price-block">
+                      <p class="device-card__retail-price-title">Розничная цена</p>
+                      <p class="device-card__retail-price">16 990 <span>руб</spa></p>
+                    </div>
+                  </div>
+                  <div class="device-card__subscribe">
+                    <p class="device-card__subscribe-type">Облачный кондиционер</p>
+                    <div class="device-card__subscribe-first-payment-block">
+                      <p class="device-card__subscribe-first-payment-title">Первый взнос</p>
+                      <p class="device-card__subscribe-first-payment">7 990 <span>руб</span></p>
+                    </div>
+                    <div class="device-card__subscribe-payment-block">
+                      <p class="device-card__subscribe-payment-title">
+                        Подписка
+                        <button class="device-card__subscribe-info-btn">
+                          <span class="visually-hidden">Дополнительная информация</span>
+                          <div class="device-card__subscribe-info-icon">
+                            <div class="device-card__subscribe-tooltip">
+                              Оплата подписки прекращается через 7 лет
+                            </div>
+                          </div>
+                        </button>
+                      </p>
+                      <p class="device-card__subscribe-payment">2 799 <span>руб/год</span></p>
+                    </div>
+                  </div>
+                  <a href="#" class="device-card__payment-link btn-primary">Заплатить сейчас 10 789 руб</a>
+                </div>
+              </div>
+            </li>
+
+            <li class="catalog__item" data-brand="bosch">
+              <div class="device-card">
+                <div class="device-card__brand  device-card__brand--bosch">
+                  <svg class="device-card__brand-icon" width="82" height="32">
+                    <use xlink:href="#bosch-color"></use>
+                  </svg>
+                </div>
+                <div class="device-card__wifi-icon">
+                  Wi-Fi управление
+                </div>
+                <div class="device-card__img-box">
+                  <img src="img/rac5000-catalog.png" alt="Bosch RAC5000">
+                </div>
+                <p class="device-card__series">Bosch RAC5000</p>
+                <p class="device-card__price">2 799 <span>руб/год</span></p>
+                <div class="device-card__additional-info">
+                  <ul class="device-card__benefits">
+                    <li class="device-card__benefit">Гарантия 3 года + 1</li>
+                    <li class="device-card__benefit">Обогрев зимой до -20°C</li>
+                    <li class="device-card__benefit">Инверторный компрессор</li>
+                    <li class="device-card__benefit">Функция самоочистки</li>
+                  </ul>
+                  <div class="device-card__retail">
+                    <p class="device-card__retail-type">Обычный кондиционер</p>
+                    <div class="device-card__retail-price-block">
+                      <p class="device-card__retail-price-title">Розничная цена</p>
+                      <p class="device-card__retail-price">16 990 <span>руб</spa></p>
+                    </div>
+                  </div>
+                  <div class="device-card__subscribe">
+                    <p class="device-card__subscribe-type">Облачный кондиционер</p>
+                    <div class="device-card__subscribe-first-payment-block">
+                      <p class="device-card__subscribe-first-payment-title">Первый взнос</p>
+                      <p class="device-card__subscribe-first-payment">7 990 <span>руб</span></p>
+                    </div>
+                    <div class="device-card__subscribe-payment-block">
+                      <p class="device-card__subscribe-payment-title">
+                        Подписка
+                        <button class="device-card__subscribe-info-btn">
+                          <span class="visually-hidden">Дополнительная информация</span>
+                          <div class="device-card__subscribe-info-icon">
+                            <div class="device-card__subscribe-tooltip">
+                              Оплата подписки прекращается через 7 лет
+                            </div>
+                          </div>
+                        </button>
+                      </p>
+                      <p class="device-card__subscribe-payment">2 799 <span>руб/год</span></p>
+                    </div>
+                  </div>
+                  <a href="#" class="device-card__payment-link btn-primary">Заплатить сейчас 10 789 руб</a>
+                </div>
+              </div>
+            </li>
+
+            <li class="catalog__item" data-brand="midea">
+              <div class="device-card">
+                <div class="device-card__brand  device-card__brand--midea">
+                  <svg class="device-card__brand-icon" width="87" height="54">
+                    <use xlink:href="#midea-color"></use>
+                  </svg>
+                </div>
+                <div class="device-card__wifi-icon">
+                  Wi-Fi управление
+                </div>
+                <div class="device-card__img-box">
+                  <img src="img/breezless-catalog.png" alt="Midea Breezelees">
+                </div>
+                <p class="device-card__series">Midea Breezelees</p>
+                <p class="device-card__price">2 799 <span>руб/год</span></p>
+                <div class="device-card__additional-info">
+                  <ul class="device-card__benefits">
+                    <li class="device-card__benefit">Гарантия 3 года + 1</li>
+                    <li class="device-card__benefit">Обогрев зимой до -20°C</li>
+                    <li class="device-card__benefit">Инверторный компрессор</li>
+                    <li class="device-card__benefit">Функция самоочистки</li>
+                  </ul>
+                  <div class="device-card__retail">
+                    <p class="device-card__retail-type">Обычный кондиционер</p>
+                    <div class="device-card__retail-price-block">
+                      <p class="device-card__retail-price-title">Розничная цена</p>
+                      <p class="device-card__retail-price">16 990 <span>руб</spa></p>
+                    </div>
+                  </div>
+                  <div class="device-card__subscribe">
+                    <p class="device-card__subscribe-type">Облачный кондиционер</p>
+                    <div class="device-card__subscribe-first-payment-block">
+                      <p class="device-card__subscribe-first-payment-title">Первый взнос</p>
+                      <p class="device-card__subscribe-first-payment">7 990 <span>руб</span></p>
+                    </div>
+                    <div class="device-card__subscribe-payment-block">
+                      <p class="device-card__subscribe-payment-title">
+                        Подписка
+                        <button class="device-card__subscribe-info-btn">
+                          <span class="visually-hidden">Дополнительная информация</span>
+                          <div class="device-card__subscribe-info-icon">
+                            <div class="device-card__subscribe-tooltip">
+                              Оплата подписки прекращается через 7 лет
+                            </div>
+                          </div>
+                        </button>
+                      </p>
+                      <p class="device-card__subscribe-payment">2 799 <span>руб/год</span></p>
+                    </div>
+                  </div>
+                  <a href="#" class="device-card__payment-link btn-primary">Заплатить сейчас 10 789 руб</a>
+                </div>
+              </div>
+            </li>
+
+            <li class="catalog__item" data-brand="midea">
+              <div class="device-card">
+                <div class="device-card__brand  device-card__brand--midea">
+                  <svg class="device-card__brand-icon" width="87" height="54">
+                    <use xlink:href="#midea-color"></use>
+                  </svg>
+                </div>
+                <div class="device-card__wifi-icon">
+                  Wi-Fi управление
+                </div>
+                <div class="device-card__img-box">
+                  <img src="img/xtream2-catalog.png" alt="Midea XTREAM 2">
+                </div>
+                <p class="device-card__series">Midea XTREAM 2</p>
+                <p class="device-card__price">2 799 <span>руб/год</span></p>
+                <div class="device-card__additional-info">
+                  <ul class="device-card__benefits">
+                    <li class="device-card__benefit">Гарантия 3 года + 1</li>
+                    <li class="device-card__benefit">Обогрев зимой до -20°C</li>
+                    <li class="device-card__benefit">Инверторный компрессор</li>
+                    <li class="device-card__benefit">Функция самоочистки</li>
+                  </ul>
+                  <div class="device-card__retail">
+                    <p class="device-card__retail-type">Обычный кондиционер</p>
+                    <div class="device-card__retail-price-block">
+                      <p class="device-card__retail-price-title">Розничная цена</p>
+                      <p class="device-card__retail-price">16 990 <span>руб</spa></p>
+                    </div>
+                  </div>
+                  <div class="device-card__subscribe">
+                    <p class="device-card__subscribe-type">Облачный кондиционер</p>
+                    <div class="device-card__subscribe-first-payment-block">
+                      <p class="device-card__subscribe-first-payment-title">Первый взнос</p>
+                      <p class="device-card__subscribe-first-payment">7 990 <span>руб</span></p>
+                    </div>
+                    <div class="device-card__subscribe-payment-block">
+                      <p class="device-card__subscribe-payment-title">
+                        Подписка
+                        <button class="device-card__subscribe-info-btn">
+                          <span class="visually-hidden">Дополнительная информация</span>
+                          <div class="device-card__subscribe-info-icon">
+                            <div class="device-card__subscribe-tooltip">
+                              Оплата подписки прекращается через 7 лет
+                            </div>
+                          </div>
+                        </button>
+                      </p>
+                      <p class="device-card__subscribe-payment">2 799 <span>руб/год</span></p>
+                    </div>
+                  </div>
+                  <a href="#" class="device-card__payment-link btn-primary">Заплатить сейчас 10 789 руб</a>
+                </div>
               </div>
             </li>
           </ul>

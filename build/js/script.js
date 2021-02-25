@@ -108,6 +108,70 @@
 })();
 
 (function () {
+  var filters = document.querySelector('.catalog__filters-list'); // const allRadio = document.querySelector('.catalog__filters-radio[value="all"]');
+  // const daichiRadio = document.querySelector('.catalog__filters-radio[value="daichi"]');
+  // const daikinRadio = document.querySelector('.catalog__filters-radio[value="daikin"]');
+  // const boschRadio = document.querySelector('.catalog__filters-radio[value="bosch"]');
+  // const mideaRadio = document.querySelector('.catalog__filters-radio[value="midea"]');
+
+  var cards = document.querySelectorAll('.catalog__item');
+  var radios = document.querySelectorAll('.catalog__filters-radio'); // const findCheckedBrand = function() {
+  //   let brand = '';
+  //   radios.forEach(function(radio) {
+  //     if (radio.checked) {
+  //       brand = radio.getAttribute('value');
+  //     }
+  //   });
+  //   return brand;
+  // };
+
+  var showCard = function showCard(card) {
+    if (card.classList.contains('hidden')) {
+      card.classList.remove('hidden');
+    }
+  };
+
+  var hideCard = function hideCard(card) {
+    if (!card.classList.contains('hidden')) {
+      card.classList.add('hidden');
+    }
+  };
+
+  var showAllCards = function showAllCards() {
+    cards.forEach(function (card) {
+      showCard(card);
+    });
+  }; // const hideAllCards = function() {
+  //   cards.forEach(function(card) {
+  //    hideCard(card);
+  //   })
+  // };
+
+
+  var renderCards = function renderCards(brand) {
+    if (brand === 'all') {
+      showAllCards();
+    } else {
+      showAllCards();
+      cards.forEach(function (card) {
+        if (card.getAttribute('data-brand') !== brand) {
+          hideCard(card);
+        }
+      });
+    }
+  };
+
+  var onRadioChange = function onRadioChange(e) {
+    var brand = e.currentTarget.getAttribute('value');
+    renderCards(brand);
+  };
+
+  radios.forEach(function (radio) {
+    radio.addEventListener('change', onRadioChange);
+  });
+})();
+
+(function () {
   var headerBar = document.querySelector('.header__bar-mobile');
   var isScrolled = window.pageYOffset > 100;
 
