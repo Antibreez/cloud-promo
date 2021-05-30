@@ -1,6 +1,11 @@
 "use strict";
 
 (function () {
+  var scene = document.querySelector('.how-it-works__bg');
+  var parallaxInstance = new Parallax(scene);
+})();
+
+(function () {
   var vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
   var $body = document.querySelector('body');
@@ -173,6 +178,11 @@
 
 (function () {
   var headerBar = document.querySelector('.header__bar-mobile');
+
+  if (!headerBar) {
+    return;
+  }
+
   var isScrolled = window.pageYOffset > 100;
 
   var showHeader = function showHeader() {

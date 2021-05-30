@@ -1,6 +1,10 @@
 (function() {
   const headerBar = document.querySelector('.header__bar-mobile');
 
+  if (!headerBar) {
+    return;
+  }
+
   let isScrolled = window.pageYOffset > 100;
 
   const showHeader = function() {

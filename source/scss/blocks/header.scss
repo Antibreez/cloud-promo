@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   background: url("../img/header-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -68,23 +69,58 @@
   }
 
   &__body {
-    padding-top: 44px;
+    position: relative;
+    padding-top: 120px;
     padding-bottom: 44px;
+    z-index: 10;
+  }
+
+  &__video-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      opacity: 0.6;
+    }
   }
 
   &__body-container {
     display: flex;
     align-items: center;
+    flex-direction: column;
   }
 
   &__title-block {
-    max-width: 525px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 75px;
+  }
+
+  &__title-logo {
+    width: 200px;
+    height: 141px;
+    margin-right: 50px;
+
+    img {
+      width: 200px;
+      height: 141px;
+    }
   }
 
   &__title {
-    @include font(72px, 72px);
+    @include font(36px, 43px);
     margin: 0 0 32px;
-    color: #fff;
+    color: #000;
   }
 
   &__desc {
@@ -94,16 +130,13 @@
   }
 
   &__img-block {
-    max-width: 570px;
-    margin-right: 20px;
-    margin-left: auto;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
   }
 
   &__img-picture {
-    margin-bottom: 13px;
+    width: 880px;
+    height: 269px;
   }
 
   &__price-block {
@@ -116,15 +149,21 @@
   }
 
   &__price {
+    @include font(24px, 36px, 500);
     display: inline-block;
-    padding: 10px 16px;
+    padding: 14px 21px;
     background-color: #fff;
-    border-radius: 8px;
-    color: #000;
+    border-radius: 12px;
+    color: #fff;
+    background-image: url("../img/btn-bg.svg");
+    background-size: cover;
   }
 
   &__bottom {
+    position: relative;
     margin-top: auto;
+    z-index: 10;
+    padding-bottom: 30px;
   }
 
   &__brands-list {
@@ -140,6 +179,33 @@
   &__brands-item {
     &:not(:last-child) {
       margin-right: 160px;
+    }
+  }
+
+  &__benefits-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__benefits-item {
+    position: relative;
+    padding-left: 39px;
+    @include font(16px, 24px);
+    color: #000;
+    width: calc((100% - 72px) / 4);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-image: url("../img/check.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   }
 }

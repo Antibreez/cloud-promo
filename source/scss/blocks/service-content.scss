@@ -1,0 +1,54 @@
+.service-content {
+  &__title {
+    @include font(40px, 48px);
+    margin: 0 0 30px;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: calc((100% - 35px) / 2);
+    padding: 33px;
+    padding-right: 270px;
+    margin-bottom: 35px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.1);
+    background-position: right -50px center;
+    background-size: auto 100%;
+    background-color: #fff;
+
+    &--app {
+      background-image: url("../img/service-app.jpg");
+    }
+
+    &--warranty {
+      background-image: url("../img/service-warranty.jpg");
+    }
+
+    &--diagnostic {
+      background-image: url("../img/service-diagnostic.jpg");
+    }
+
+    &--support {
+      background-image: url("../img/service-support.jpg");
+    }
+  }
+
+  &__item-title {
+    @include font(20px, 24px, 400);
+    color: #000;
+    margin: 0 0 10px;
+  }
+
+  &__item-desc {
+    @include font(16px, 24px);
+    color: #000;
+    margin: 0;
+  }
+}

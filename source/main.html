@@ -16,7 +16,7 @@
   </div>
 
   <header class="header">
-      <div class="header__bar">
+      <!-- <div class="header__bar">
         <div class="header__bar-container  wrapper">
           <a href="#" class="header__logo">
             <img src="img/cloud-logo.svg" alt="Облачный кондиционер">
@@ -36,7 +36,7 @@
           </div>
           <a href="#" class="header__buy-link  btn-small">Купить</a>
         </div>
-      </div>
+      </div> -->
 
 
       <div class="header__bar  header__bar-mobile">
@@ -60,40 +60,45 @@
           <a href="#" class="header__buy-link  btn-small">Купить</a>
         </div>
       </div>
+      <div class="header__video-box">
+        <video style="object-fit: cover; background-size: cover; width: 100%; height: 100%" preload="auto" playsinline="" autoplay="" loop="" muted=""> <source src="https://dl.dropboxusercontent.com/s/aaq5lkncuhqwevw/Pexels%20Videos%202782_1%20%283%29.mp4?dl=0" type="video/mp4"></video>
+      </div>
       <div class="header__body">
         <div class="header__body-container  wrapper">
           <div class="header__title-block">
-            <h1 class="header__title">Облачный кондиционер</h1>
-            <p class="header__desc">
-              Кондиционер, который управляется со&nbsp;смартфона и&nbsp;продается с&nbsp;подпиской
-            </p>
+            <div class="header__title-logo">
+              <img src="img/cloud.svg" alt="Облачный кондиционер" class="header__title-logo-img">
+            </div>
+            <div class="header__title-details">
+              <h1 class="header__title">
+                Управляется со смартфона,<br>
+                работает по подписке
+              </h1>
+              <span class="header__price">от 7 999 руб</span>
+            </div>
           </div>
           <div class="header__img-block">
             <picture class="header__img-picture">
-              <source type="image/webp" srcset="img/alpha-side.webp">
-              <img class="header__img" src="img/alpha-side.png" alt="Alpha">
+              <source type="image/webp" srcset="img/alpha.webp">
+              <img class="header__img" src="img/alpha.png" alt="Alpha">
             </picture>
-            <div class="header__price-block">
-              <span class="header__price-title">Daichi Alpha</span>
-              <span class="header__price">от 7 999 руб</span>
-            </div>
           </div>
         </div>
       </div>
       <div class="header__bottom">
         <div class="header__bottom-container  wrapper">
-          <ul class="header__brands-list">
-            <li class="header__brands-item">
-              <img src="img/daichi.svg" alt="daichi" class="header__brands-img">
+          <ul class="header__benefits-list">
+            <li class="header__benefits-item">
+              Управление с помощью пульта, смартфона или ПК
             </li>
-            <li class="header__brands-item">
-              <img src="img/daikin.svg" alt="daikin" class="header__brands-img">
+            <li class="header__benefits-item">
+              Сопровождение консультационной службы °D
             </li>
-            <li class="header__brands-item">
-              <img src="img/bosch.svg" alt="bosch" class="header__brands-img">
+            <li class="header__benefits-item">
+              Дистанционный онлайн мониторинг и диагностика параметров работы кондиционера
             </li>
-            <li class="header__brands-item">
-              <img src="img/midea.svg" alt="midea" class="header__brands-img">
+            <li class="header__benefits-item">
+              Дополнительный год гарантии
             </li>
           </ul>
         </div>
@@ -102,17 +107,20 @@
 
   <main class="main-page">
     <section class="how-it-works">
+      <div class="how-it-works__bg">
+        <img src="img/cloud-bg.png" alt="" data-depth="0.4">
+      </div>
       <div class="how-it-works__container  wrapper">
         <div class="how-it-works__body">
           <div class="how-it-works__left-side">
             <h2 class="how-it-works__title">Как это работает</h2>
             <p class="how-it-works__desc">
-              Климат по&nbsp;подписке на&nbsp;условиях ежегодной оплаты на&nbsp;срок до&nbsp;7&nbsp;лет
+              Кондиционер, который работает по&nbsp;подписке
             </p>
             <ul class="how-it-works__stages-list">
               <li class="how-it-works__stages-item">
                 <span>1</span>
-                <span>Оплачиваете сумму первого взноса + первый ежегодный платёж</span>
+                <span>Оплачиваете стоимость оборудования</span>
               </li>
               <li class="how-it-works__stages-item">
                 <span>2</span>
@@ -120,34 +128,39 @@
               </li>
               <li class="how-it-works__stages-item">
                 <span>3</span>
-                <span>Платите фиксированный ежегодный платёж по&nbsp;подписке в&nbsp;течение 7&nbsp;лет</span>
+                <span>Платите стоимость подписки и&nbsp;получаете доступ к&nbsp;управлению кондиционером</span>
               </li>
             </ul>
           </div>
           <div class="how-it-works__right-side">
+            <p class="how-it-works__right-side-title">Вы покупаете</p>
+            <p class="how-it-works__right-side-desc">Daichi Alpha A20AVQS01/A20FV1</p>
             <div class="how-it-works__img-block">
               <picture class="how-it-works__img-picture">
                 <source type="image/webp" srcset="img/alpha.webp">
                 <img class="how-it-works__img" src="img/alpha.png" alt="Alpha">
               </picture>
             </div>
-            <p class="how-it-works__device-name">Daichi Alpha A20AVQ1/A20FV1</p>
             <div class="how-it-works__payment">
               <div class="how-it-works__payment-first">
-                <p class="how-it-works__payment-note">Первый взнос</p>
                 <p class="how-it-works__payment-first-value">7 990 руб.</p>
+                <p class="how-it-works__payment-note">Цена оборудования</p>
               </div>
+              <div class="how-it-works__payment-plus">+</div>
               <div class="how-it-works__payment-subscribe">
-                <p class="how-it-works__payment-note">Подписка</p>
-                <p class="how-it-works__payment-subscribe-value">2 799 руб/год</p>
+                <p class="how-it-works__payment-first-value">2 799 руб/год</p>
+                <p class="how-it-works__payment-note">Цена подписки</p>
               </div>
             </div>
-            <p class="how-it-works__subscription-desc">
-              Через 7 лет оплата подпискипрекращается, управлять кондиционером можно с&nbsp;помощью мобильного приложения или пульта.
+            <p class="how-it-works__payment-conditions">
+              * цена может измениться в зависимости от выбранной модели кондиционера
             </p>
-            <a href="#" class="how-it-works__payment-link  btn-primary">Заплатить сейчас 10 789 руб</a>
+            <div class="how-it-works__subscription-desc">
+              <p>Платите за климат, когда он нужен</p>
+              <p>Оплачивайте подписку в любое время: досрочно или с перерывами.</p>
+            </div>
           </div>
-          <div class="how-it-works__service-block">
+          <!-- <div class="how-it-works__service-block">
             <p class="how-it-works__service-note">Что входит в сервис?</p>
             <ul class="how-it-works__service-list">
               <li class="how-it-works__service-item">Мобильное приложение с&nbsp;расширенным диапазоном функций управления</li>
@@ -155,8 +168,36 @@
               <li class="how-it-works__service-item">Дистанционный мониторинг и&nbsp;диагностика кондиционера</li>
               <li class="how-it-works__service-item">Сопровождение консультационной службы</li>
             </ul>
-          </div>
+          </div> -->
         </div>
+      </div>
+    </section>
+
+    <section class="service-content">
+      <div class="service-content__container  wrapper">
+        <h2 class="service-content__title">Что входит в сервис?</h2>
+        <ul class="service-content__list">
+          <li class="service-content__item  service-content__item--app">
+            <p class="service-content__item-title">Управление с&nbsp;помощью смартфона</p>
+            <p class="service-content__item-desc">
+              С помощью приложения Daichi&nbsp;Comfort с&nbsp;расширенным диапазоном функций управления
+            </p>
+          </li>
+          <li class="service-content__item  service-content__item--warranty">
+            <p class="service-content__item-title">+ 1 год гарантии в&nbsp;подарок</p>
+            <p class="service-content__item-desc">Дополнительный год гарантии на кондиционер в&nbsp;подарок</p>
+          </li>
+          <li class="service-content__item  service-content__item--diagnostic">
+            <p class="service-content__item-title">Дистанционная диагностика</p>
+            <p class="service-content__item-desc">
+              Удалённое определение неисправностей кондиционера и&nbsp;подключение сервисной службы на льготных условиях
+            </p>
+          </li>
+          <li class="service-content__item  service-content__item--support">
+            <p class="service-content__item-title">Специалист всегда на&nbsp;связи</p>
+            <p class="service-content__item-desc">Сопровождение консультационной службы&nbsp;°D</p>
+          </li>
+        </ul>
       </div>
     </section>
 
