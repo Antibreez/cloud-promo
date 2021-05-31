@@ -1,4 +1,4 @@
 (function() {
-  var scene = document.querySelector('.how-it-works__bg');
+  var scene = document.querySelector('.header__bg');
   var parallaxInstance = new Parallax(scene);
 })();

@@ -1,7 +1,7 @@
 "use strict";
 
 (function () {
-  var scene = document.querySelector('.how-it-works__bg');
+  var scene = document.querySelector('.header__bg');
   var parallaxInstance = new Parallax(scene);
 })();
 
@@ -177,37 +177,42 @@
 })();
 
 (function () {
-  var headerBar = document.querySelector('.header__bar-mobile');
-
-  if (!headerBar) {
-    return;
-  }
-
-  var isScrolled = window.pageYOffset > 100;
-
-  var showHeader = function showHeader() {
-    !headerBar.classList.contains('opened') && headerBar.classList.add('opened');
-  };
-
-  var hideHeader = function hideHeader() {
-    headerBar.classList.contains('opened') && headerBar.classList.remove('opened');
-  };
-
-  var onScroll = function onScroll() {
-    if (!isScrolled && window.pageYOffset > 100) {
-      showHeader();
-      isScrolled = true;
+  var swiper = new Swiper('.device-card__slider-container', {
+    // Optional parameters
+    loop: true,
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
     }
+  });
+})();
 
-    if (isScrolled && window.pageYOffset < 100) {
-      hideHeader();
-      isScrolled = false;
-    }
-  };
-
-  if (isScrolled) {
-    showHeader();
-  }
-
-  document.addEventListener('scroll', onScroll);
+(function () {// const headerBar = document.querySelector('.header__bar-mobile');
+  // if (!headerBar) {
+  //   return;
+  // }
+  // let isScrolled = window.pageYOffset > 100;
+  // const showHeader = function() {
+  //   !headerBar.classList.contains('opened')
+  //   && headerBar.classList.add('opened');
+  // }
+  // const hideHeader = function() {
+  //   headerBar.classList.contains('opened')
+  //   && headerBar.classList.remove('opened');
+  // }
+  // const onScroll = function() {
+  //   if (!isScrolled && window.pageYOffset > 100) {
+  //     showHeader();
+  //     isScrolled = true;
+  //   }
+  //   if (isScrolled && window.pageYOffset < 100) {
+  //     hideHeader();
+  //     isScrolled = false;
+  //   }
+  // }
+  // if (isScrolled) {
+  //   showHeader();
+  // }
+  // document.addEventListener('scroll', onScroll);
 })();
