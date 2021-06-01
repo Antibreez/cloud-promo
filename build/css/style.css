@@ -4848,7 +4848,11 @@ a {
 }
 
 .main__body {
-  background-color: lightgrey;
+  background-image: url("../img/page-bg.jpg");
+  background-size: 100% auto;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #fff;
 }
 
 .btn-primary,
@@ -4885,7 +4889,7 @@ a {
 .btn-primary:hover, .btn-primary:focus,
 .btn-small:hover,
 .btn-small:focus {
-  background-color: #113EE0;
+  background-color: #3392ff;
   color: #fff;
 }
 
@@ -5522,6 +5526,7 @@ a {
   position: relative;
   padding-top: 120px;
   overflow: hidden;
+  background-color: #fff;
 }
 
 .how-it-works__bg {
@@ -5555,6 +5560,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 80px;
 }
 
 .how-it-works__left-side {
@@ -5811,21 +5817,51 @@ a {
   margin: 0 auto;
 }
 
+.how-it-works__alert {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  position: relative;
+  padding: 38px 32px 38px 100px;
+  background-color: rgba(255, 0, 0, 0.03);
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.how-it-works__alert::before {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 32px;
+  display: block;
+  width: 48px;
+  height: 48px;
+  background-image: url("../img/alert-2.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .cloud-advantages {
   padding-top: 138px;
-  padding-bottom: 90px;
-  background-image: url("../img/spots-bg.png");
-  background-repeat: no-repeat;
-  background-position: top center;
+  padding-bottom: 40px;
+  background-color: #fff;
+}
+
+.cloud-advantages__diagnostics-block {
+  background-color: #fff;
 }
 
 .cloud-advantages__diagnostics {
   min-height: 320px;
-  padding: 44px 58% 0 0;
+  padding: 80px 58% 160px 0;
   background-image: url("../img/diagnostics.svg");
   background-repeat: no-repeat;
   background-position: top right 96px;
-  margin: 0 0 161px;
 }
 
 .cloud-advantages__title {
@@ -5844,12 +5880,21 @@ a {
   margin: 0;
 }
 
+.cloud-advantages__comfort-payment-block {
+  background-color: #fff;
+  padding-bottom: 100px;
+}
+
 .cloud-advantages__comfort-payment {
   min-height: 226px;
-  padding: 10px 58% 0 0;
+  padding: 10px 0 0 58%;
   background-image: url("../img/comfort-payment.svg");
   background-repeat: no-repeat;
-  background-position: top right 176px;
+  background-position: top left 120px;
+}
+
+.cloud-advantages__comfort-payment .cloud-advantages__title {
+  max-width: 500px;
 }
 
 .mobile-control {
@@ -5863,46 +5908,56 @@ a {
   max-width: 616px;
 }
 
-.mobile-control__title::after {
+.mobile-control__body {
+  padding: 50px 50% 50px 40px;
+  border-radius: 15px;
+  background-image: url("../img/app-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mobile-control__body::after {
   content: "";
+  position: absolute;
+  top: 35px;
+  right: 35px;
   display: inline-block;
   width: 42px;
   height: 42px;
   margin-left: 10px;
   vertical-align: middle;
-  background-image: url("../img/app-icon.svg");
+  background-image: url("../img/app_logo.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.mobile-control__body {
-  padding: 0 59% 83px 0;
-}
-
 .mobile-control__list {
-  margin: 0 0 87px;
+  margin: 0;
   padding: 0;
 }
 
 .mobile-control__item:not(:last-child) {
-  margin: 0 0 32px;
+  margin: 0 0 10px;
 }
 
 .mobile-control__item-text {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  color: #A6AFBE;
+  color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 20px;
+  border-radius: 15px;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
 
 .mobile-control__item-text:hover {
   cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .mobile-control__item-text span:first-child {
@@ -5911,11 +5966,19 @@ a {
   margin-right: 24px;
 }
 
-.mobile-control__item-text.hovered {
+.mobile-control__item-radio:checked + label {
   color: #000;
+  background-color: #fff;
+  -webkit-box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
-.mobile-control__item-text.hovered + .mobile-control__item-img {
+.mobile-control__item-radio:checked + label span:first-child {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.mobile-control__item-radio:checked + label + .mobile-control__item-img {
   visibility: visible;
   opacity: 1;
   -webkit-transition-delay: 0s;
@@ -5926,14 +5989,19 @@ a {
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  top: 0;
+  top: 50%;
   right: 25%;
-  width: 296px;
-  height: 556px;
-  -webkit-transform: translateX(50%);
-          transform: translateX(50%);
+  width: 410px;
+  height: 527px;
+  margin-right: -200px;
+  margin-top: -280px;
   -webkit-transition: opacity 0.2s, visibility 0s ease 0.2s;
   transition: opacity 0.2s, visibility 0s ease 0.2s;
+}
+
+.mobile-control__app-block-container {
+  padding-top: 65px;
+  padding-bottom: 65px;
 }
 
 .mobile-control__app-block {
@@ -5962,8 +6030,28 @@ a {
   background-image: url("../img/googleplay-icon.svg");
 }
 
+.mobile-control__app-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+}
+
+.mobile-control__app-title img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
 .all-benefits {
-  padding-top: 185px;
+  padding-top: 80px;
+  background-color: #fff;
 }
 
 .all-benefits__title {
@@ -5982,11 +6070,6 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  max-height: 432px;
 }
 
 .all-benefits__item {
@@ -5995,34 +6078,24 @@ a {
   font-weight: 400;
   color: #000;
   position: relative;
-  max-width: 547px;
-  padding: 10px 0 0 75px;
-  margin: 0 0 32px;
+  width: calc((100% - 50px) / 2);
+  padding: 0 0 0 50px;
+  margin: 0 0 60px;
 }
 
 .all-benefits__item span:first-child {
   position: absolute;
   top: 0;
   left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 40px;
-  height: 40px;
-  color: #000;
-  border-radius: 50%;
-  background: linear-gradient(136.91deg, rgba(0, 173, 235, 0.2) 2.26%, rgba(223, 97, 254, 0.2) 100.52%);
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/check-round.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .catalog {
   padding-top: 80px;
-  padding-bottom: 90px;
 }
 
 .catalog__container {
@@ -6040,7 +6113,7 @@ a {
 }
 
 .catalog__filters {
-  margin-bottom: 64px;
+  margin-bottom: 45px;
 }
 
 .catalog__filters-list {
@@ -6070,10 +6143,13 @@ a {
   color: #888;
   text-align: center;
   border-bottom: 2px solid #eee;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .catalog__filters-label:hover {
   cursor: pointer;
+  color: #3392ff;
 }
 
 .catalog__filter-icon-grey {
@@ -6154,9 +6230,15 @@ a {
   background-color: #000;
 }
 
+.device-card__slider-container {
+  height: 100%;
+}
+
 .device-card__image-block {
   position: relative;
   max-width: 360px;
+  margin-right: 65px;
+  padding-top: 8px;
 }
 
 .device-card__logo {
@@ -6166,9 +6248,14 @@ a {
   z-index: 10;
 }
 
+.device-card__logo img {
+  width: 80px;
+  height: auto;
+}
+
 .device-card__bages {
   position: absolute;
-  top: -2px;
+  top: 0;
   right: 0;
   z-index: 10;
 }
@@ -6180,6 +6267,111 @@ a {
 
 .device-card__bages-item {
   margin-bottom: 1px;
+}
+
+.device-card__title {
+  font-size: 28px;
+  line-height: 43px;
+  font-weight: 500;
+  margin: 0 0 15px;
+  color: #000;
+}
+
+.device-card__benefits-list {
+  margin: 0;
+  padding: 0;
+  margin: 0 0 25px;
+}
+
+.device-card__benefits-item {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  color: #000;
+  padding-left: 35px;
+  position: relative;
+}
+
+.device-card__benefits-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/check.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.device-card__benefits-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.device-card__terms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 5px;
+}
+
+.device-card__terms-item {
+  margin-bottom: 20px;
+}
+
+.device-card__terms-item:not(:last-child) {
+  margin-right: 60px;
+}
+
+.device-card__terms-title {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  margin: 0 0 10px;
+  color: #5ea9ff;
+}
+
+.device-card__terms-price-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.device-card__terms-price-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.device-card__terms-price {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  margin: 0;
+  color: #000;
+}
+
+.device-card__terms-price-desc {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #888;
+  margin: 0;
+}
+
+.device-card__terms-item--grey .device-card__terms-title,
+.device-card__terms-item--grey .device-card__terms-price {
+  color: #888;
+}
+
+.device-card__terms-item--grey .device-card__terms-price {
+  font-weight: 400;
+  text-decoration: line-through;
+}
+
+.service-content {
+  padding-top: 30px;
+  background-color: #fff;
 }
 
 .service-content__title {
@@ -6245,4 +6437,90 @@ a {
   font-weight: 300;
   color: #000;
   margin: 0;
+}
+
+.questions {
+  background-color: #fff;
+}
+
+.questions__title {
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 300;
+  color: #000;
+  margin: 0 0 56px;
+}
+
+.questions__list {
+  margin: 0;
+  padding: 0;
+}
+
+.questions__item {
+  border-top: 1px solid #eee;
+}
+
+.questions__item:last-child {
+  border-bottom: 1px solid #eee;
+}
+
+.questions__item-top {
+  position: relative;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  padding: 27px 60px 27px 0;
+  color: #000;
+  margin: 0;
+}
+
+.questions__item-top:hover {
+  cursor: pointer;
+}
+
+.questions__item-top:hover svg {
+  color: #00adeb;
+}
+
+.questions__item-top.opened .questions__item-icon {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.questions__item-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.questions__item-icon svg {
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  color: #000;
+}
+
+.questions__item-content {
+  font-size: 15px;
+  line-height: 27px;
+  font-weight: 400;
+  max-width: 800px;
+  padding-bottom: 40px;
+  margin: 0;
+  display: none;
 }

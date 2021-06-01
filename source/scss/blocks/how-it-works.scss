@@ -2,6 +2,7 @@
   position: relative;
   padding-top: 120px;
   overflow: hidden;
+  background-color: #fff;
 
   &__bg {
     position: absolute;
@@ -30,6 +31,7 @@
 
   &__body {
     display: flex;
+    margin-bottom: 80px;
     //flex-wrap: wrap;
   }
 
@@ -232,5 +234,28 @@
     padding-left: 34px;
     padding-right: 34px;
     margin: 0 auto;
+  }
+
+  &__alert {
+    @include font(18px, 24px, 400);
+    position: relative;
+    padding: 38px 32px 38px 100px;
+    background-color: rgba(255, 0, 0, 0.03);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 26px;
+      left: 32px;
+      display: block;
+      width: 48px;
+      height: 48px;
+      background-image: url("../img/alert-2.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
 }

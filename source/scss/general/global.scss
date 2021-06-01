@@ -126,6 +126,10 @@ a {
 }
 
 .main__body {
-  background-color: lightgrey;
+  background-image: url("../img/page-bg.jpg");
+  background-size: 100% auto;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #fff;
 }
 

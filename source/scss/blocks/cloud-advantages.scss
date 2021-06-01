@@ -1,17 +1,18 @@
 .cloud-advantages {
   padding-top: 138px;
-  padding-bottom: 90px;
-  background-image: url("../img/spots-bg.png");
-  background-repeat: no-repeat;
-  background-position: top center;
+  padding-bottom: 40px;
+  background-color: #fff;
+
+  &__diagnostics-block {
+    background-color: #fff;
+  }
 
   &__diagnostics {
     min-height: 320px;
-    padding: 44px 58% 0 0;
+    padding: 80px 58% 160px 0;
     background-image: url("../img/diagnostics.svg");
     background-repeat: no-repeat;
     background-position: top right 96px;
-    margin: 0 0 161px;
   }
 
   &__title {
@@ -26,11 +27,20 @@
     margin: 0;
   }
 
+  &__comfort-payment-block {
+    background-color: #fff;
+    padding-bottom: 100px;
+  }
+
   &__comfort-payment {
     min-height: 226px;
-    padding: 10px 58% 0 0;
+    padding: 10px 0 0 58%;
     background-image: url("../img/comfort-payment.svg");
     background-repeat: no-repeat;
-    background-position: top right 176px;
+    background-position: top left 120px;
+
+    .cloud-advantages__title {
+      max-width: 500px;
+    }
   }
 }

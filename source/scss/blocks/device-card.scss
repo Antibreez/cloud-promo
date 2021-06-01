@@ -15,9 +15,15 @@
     background-color: #000;
   }
 
+  &__slider-container {
+    height: 100%;
+  }
+
   &__image-block {
     position: relative;
     max-width: 360px;
+    margin-right: 65px;
+    padding-top: 8px;
   }
 
   &__logo {
@@ -25,11 +31,16 @@
     top: -10px;
     left: -1px;
     z-index: 10;
+
+    img {
+      width: 80px;
+      height: auto;
+    }
   }
 
   &__bages {
     position: absolute;
-    top: -2px;
+    top: 0;
     right: 0;
     z-index: 10;
 
@@ -41,5 +52,94 @@
 
   &__bages-item {
     margin-bottom: 1px;
+  }
+
+  &__title {
+    @include font(28px, 43px, 500);
+    margin: 0 0 15px;
+    color: #000;
+  }
+
+  &__benefits-list {
+    margin: 0;
+    padding: 0;
+    margin: 0 0 25px;
+  }
+
+  &__benefits-item {
+    @include font(16px, 24px);
+    color: #000;
+    padding-left: 35px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-image: url("../img/check.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__terms {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+  }
+
+  &__terms-item {
+    margin-bottom: 20px;
+
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
+  }
+
+  &__terms-title {
+    @include font(16px, 24px, 500);
+    margin: 0 0 10px;
+    color: #5ea9ff;
+  }
+
+  &__terms-price-item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__terms-price-block {
+    display: flex;
+  }
+
+  &__terms-price {
+    @include font(18px, 27px, 500);
+    margin: 0;
+    color: #000;
+  }
+
+  &__terms-price-desc {
+    @include font(12px, 18px, 400);
+    color: #888;
+    margin: 0;
+  }
+
+  &__terms-item--grey {
+    .device-card__terms-title,
+    .device-card__terms-price {
+      color: #888;
+    }
+
+    .device-card__terms-price {
+      font-weight: 400;
+      text-decoration: line-through;
+    }
   }
 }

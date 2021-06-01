@@ -1,6 +1,5 @@
 .catalog {
   padding-top: 80px;
-  padding-bottom: 90px;
 
   &__container {
     padding-right: 71px;
@@ -15,7 +14,7 @@
   }
 
   &__filters {
-    margin-bottom: 64px;
+    margin-bottom: 45px;
   }
 
   &__filters-list {
@@ -41,9 +40,11 @@
     color: #888;
     text-align: center;
     border-bottom: 2px solid #eee;
+    transition: color 0.3s;
 
     &:hover {
       cursor: pointer;
+      color: #3392ff;
     }
 
     // &--daichi {

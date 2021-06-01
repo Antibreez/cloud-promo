@@ -1,8 +1,10 @@
 "use strict";
 
 (function () {
-  var scene = document.querySelector('.header__bg');
-  var parallaxInstance = new Parallax(scene);
+  var sceneHeader = document.querySelector('.header__bg');
+  var headerParallaxInstance = new Parallax(sceneHeader);
+  var sceneWorks = document.querySelector('.how-it-works__bg');
+  var worksParallaxInstance = new Parallax(sceneWorks);
 })();
 
 (function () {
@@ -91,25 +93,24 @@
 (function () {
   var items = document.querySelectorAll('.mobile-control__item-text');
 
-  var onItemsClick = function onItemsClick(e) {
-    e.preventDefault();
-  };
+  var onItemsClick = function onItemsClick(e) {//e.preventDefault();
+  }; // const onItemOver = function(e) {
+  //   const target = e.currentTarget;
+  //   target.classList.add('hovered');
+  // }
+  // const onItemLeave = function(e) {
+  //   const target = e.currentTarget;
+  //   target.classList.remove('hovered');
+  // }
+  // items.forEach(function(item) {
+  //   item.addEventListener('click', onItemsClick);
+  //   item.addEventListener('mouseenter', onItemOver);
+  //   item.addEventListener('mouseleave', onItemLeave);
+  // });
+  // $('mobile-control__item-text').click(function() {
+  //   $('.mobile-control__item-text').removeClass(ho)
+  // });
 
-  var onItemOver = function onItemOver(e) {
-    var target = e.currentTarget;
-    target.classList.add('hovered');
-  };
-
-  var onItemLeave = function onItemLeave(e) {
-    var target = e.currentTarget;
-    target.classList.remove('hovered');
-  };
-
-  items.forEach(function (item) {
-    item.addEventListener('click', onItemsClick);
-    item.addEventListener('mouseenter', onItemOver);
-    item.addEventListener('mouseleave', onItemLeave);
-  });
 })();
 
 (function () {
@@ -215,4 +216,12 @@
   //   showHeader();
   // }
   // document.addEventListener('scroll', onScroll);
+})();
+
+(function () {
+  $('.questions__item-top').click(function () {
+    console.log($(this)[0]);
+    $(this).toggleClass('opened');
+    $(this).next().slideToggle();
+  });
 })();
