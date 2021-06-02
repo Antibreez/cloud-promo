@@ -1,6 +1,6 @@
 //РАЗРЕШЕНИЯ
 
-// Меньше 1440
+// Меньше 1200
 @mixin tablet {
   @media (max-width: $width-desktop - 1px) {
     @content;

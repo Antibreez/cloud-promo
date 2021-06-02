@@ -2,7 +2,6 @@
   padding-top: 80px;
 
   &__container {
-    padding-right: 71px;
   }
 
   &__title {
@@ -122,10 +121,19 @@
     width: 100%;
     margin-bottom: 24px;
 
+    .device-card {
+      margin: 0 auto;
+    }
+
+
     &.hidden {
       display: none;
     }
+  }
+}
 
-    margin-right: 24px;
+@include tablet {
+  .catalog {
+
   }
 }

@@ -16,11 +16,11 @@
   }
 
   &__item {
-    @include font(16px, 24px, 400);
+    @include font(16px, 24px);
     color: $text-main;
     position: relative;
     width: calc((100% - 50px) / 2);
-    padding: 0 0 0 50px;
+    padding: 0 20px 0 50px;
     margin: 0 0 60px;
 
 

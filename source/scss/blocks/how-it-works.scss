@@ -75,7 +75,8 @@
     }
 
     & span:last-child {
-      max-width: 347px;
+      max-width: 367px;
+      padding-right: 20px;
     }
   }
 
@@ -175,7 +176,7 @@
 
   &__payment-note {
     @include font(14px, 21px);
-    color: $text-main;
+    color: $text-minor;
     margin: 0;
   }
 

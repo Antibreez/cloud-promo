@@ -1,0 +1,91 @@
+.footer {
+  padding: 100px 0 130px;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.6)),
+    url("../img/footer-bg.jpg") bottom center /cover no-repeat;
+
+  &__title {
+    @include font(40px, 48px);
+    color: #000;
+    margin: 0 auto 120px;
+    max-width: 960px;
+    text-align: center;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 940px;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    @include font(0, 0);
+    width: 200px;
+    padding: 4px;
+    background-color: #fff;
+    margin: 0 0 50px;
+  }
+
+  &__contacts-item {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__contacts-name {
+    @include font(18px, 21px, 500);
+    color: #000;
+    margin: 0 0 7px;
+  }
+
+  &__contacts-desc,
+  &__contacts-link {
+    display: block;
+    @include font(18px, 21px);
+    text-decoration: none;
+    color: #000;
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 7px;
+    }
+  }
+
+  &__contacts-link {
+    transition: color 0.3s;
+
+    &:hover {
+      color: #00adeb;
+    }
+  }
+
+  &__certificate {
+    display: flex;
+    max-width: 450px;
+  }
+
+  &__certificate-img {
+    width: 210px;
+    height: 297px;
+    margin-right: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+  }
+
+  &__certificate-desc {
+    p {
+      &:first-child {
+        @include font(14px, 21px);
+        margin: 0 0 10px;
+      }
+
+      &:last-child {
+        @include font(16px, 24px);
+        margin: 0;
+      }
+    }
+  }
+}

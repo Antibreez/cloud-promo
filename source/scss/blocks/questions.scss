@@ -1,5 +1,7 @@
 .questions {
   background-color: #fff;
+  padding-bottom: 100px;
+  padding-top: 80px;
 
   &__title {
     @include font(40px, 48px);
@@ -22,7 +24,7 @@
 
   &__item-top {
     position: relative;
-    @include font(18px, 24px, 400);
+    @include font(18px, 24px);
     padding: 27px 60px 27px 0;
     color: #000;
     margin: 0;
@@ -61,10 +63,20 @@
   }
 
   &__item-content {
-    @include font(15px, 27px, 400);
+    @include font(15px, 27px);
     max-width: 800px;
     padding-bottom: 40px;
     margin: 0;
     display: none;
+
+    ul {
+      margin: 10px 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: disc;
+      list-style-position: inside;
+    }
   }
 }

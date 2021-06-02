@@ -45,7 +45,7 @@
   }
 
   &__item-text {
-    @include font(16px, 24px, 400);
+    @include font(16px, 24px);
     color: $text-main;
     display: flex;
     padding: 20px;
