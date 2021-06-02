@@ -215,7 +215,7 @@
   }
 
   &__cloud-title {
-    @include font(24px, 28px, 400);
+    @include font(28px, 33px);
     color: #000;
     margin: 0 0 20px;
     text-align: center;
@@ -349,6 +349,10 @@
       }
     }
 
+    &__right-side {
+      max-width: 640px;
+    }
+
     &__bar-container {
       padding-left: 24px;
       padding-right: 24px;
@@ -462,5 +466,55 @@
       }
     }
 
+  }
+}
+
+@include mobile {
+  .header {
+    padding-top: 120px;
+
+    &__bg {
+      top: auto;
+      bottom: 26%;
+      left: 61%;
+    }
+
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__left-side {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 0 auto 60px;
+    }
+
+    &__logo-title {
+      img {
+        width: 180px;
+      }
+    }
+
+    &__title {
+      @include font(28px, 33px);
+    }
+
+    &__desc {
+      @include font(16px, 25px);
+      max-width: 450px;
+    }
+
+    &__right-side {
+      margin: 0 auto;
+    }
+
+    &__device-block {
+      img {
+        width: auto;
+        max-width: 370px;
+      }
+    }
   }
 }

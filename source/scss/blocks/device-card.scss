@@ -163,3 +163,46 @@
     }
   }
 }
+
+@include mobile {
+  .device-card {
+    max-width: 620px;
+    flex-direction: column;
+
+    &__image-block {
+      max-width: none;
+      margin-right: 0;
+    }
+
+    &__slider-container {
+      max-width: 300px;
+    }
+
+    &__bages {
+      display: flex;
+    }
+
+    &__bages-item {
+      &:first-child {
+        margin-right: 7px;
+      }
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__terms {
+      flex-direction: column-reverse;
+    }
+
+    &__terms-item {
+      display: flex;
+    }
+
+    &__terms-title {
+      max-width: 120px;
+      margin-right: 30px;
+    }
+  }
+}

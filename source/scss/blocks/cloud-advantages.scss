@@ -44,3 +44,16 @@
     }
   }
 }
+
+@include tablet {
+  .cloud-advantages {
+    &__diagnostics {
+      background-size: 45% auto;
+      background-position: top 23% right 60px;
+    }
+
+    &__comfort-payment {
+      background-position: top left 70px;
+    }
+  }
+}

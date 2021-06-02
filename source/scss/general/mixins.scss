@@ -7,7 +7,7 @@
   }
 }
 
-// Меньше 1000
+// Меньше 960
 @mixin mobile {
   @media (max-width: $width-tablet - 1px) {
     @content;
