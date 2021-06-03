@@ -200,8 +200,13 @@
     var text = $(this).children('option:selected').text();
     var value = $(this).val();
     $(this).parent().prev().text(text);
-    $('.catalog__item').addClass('hidden');
-    $('.catalog__item[data-brand=' + value + ']').removeClass('hidden');
+
+    if (value === 'all') {
+      $('.catalog__item').removeClass('hidden');
+    } else {
+      $('.catalog__item').addClass('hidden');
+      $('.catalog__item[data-brand=' + value + ']').removeClass('hidden');
+    }
   });
 })();
 

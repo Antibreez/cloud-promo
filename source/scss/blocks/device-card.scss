@@ -265,11 +265,13 @@
     &__terms-price {
       @include font(14px, 21px, 400);
       margin-left: auto;
+      white-space: nowrap;
     }
 
     &__terms-price-desc {
       @include font(12px, 18px, 300);
       margin-right: 20px;
+      white-space: nowrap;
     }
 
     &__terms-price-block {

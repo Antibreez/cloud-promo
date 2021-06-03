@@ -22,7 +22,7 @@
 
 .btn-primary,
 .btn-small {
-  background-color: $primary;
+  background-color: #5ea9ff;
   color: #fff;
 
   &:hover,
@@ -45,8 +45,8 @@
 
   &:hover,
   &:focus {
-    border-color: $primary;
-    color: $primary;
+    border-color: #5ea9ff;
+    color: #5ea9ff;
     background-color: #fff;
   }
 

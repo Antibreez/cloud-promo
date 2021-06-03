@@ -4888,7 +4888,7 @@ a {
 
 .btn-primary,
 .btn-small {
-  background-color: #00ADEB;
+  background-color: #5ea9ff;
   color: #fff;
 }
 
@@ -4913,8 +4913,8 @@ a {
 }
 
 .btn-secondary:hover, .btn-secondary:focus {
-  border-color: #00ADEB;
-  color: #00ADEB;
+  border-color: #5ea9ff;
+  color: #5ea9ff;
   background-color: #fff;
 }
 
@@ -6472,6 +6472,10 @@ a {
   .mobile-control__app-link:first-child {
     margin: 0 0 10px;
   }
+  .mobile-control__app-block {
+    max-width: 330px;
+    margin: 0 auto;
+  }
 }
 
 .all-benefits {
@@ -7007,12 +7011,14 @@ a {
     line-height: 21px;
     font-weight: 400;
     margin-left: auto;
+    white-space: nowrap;
   }
   .device-card__terms-price-desc {
     font-size: 12px;
     line-height: 18px;
     font-weight: 300;
     margin-right: 20px;
+    white-space: nowrap;
   }
   .device-card__terms-price-block {
     -webkit-box-orient: vertical;
