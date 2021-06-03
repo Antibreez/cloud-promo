@@ -1,4 +1,4 @@
-.questions {
+.mobile-control-mobile {
   background-color: #fff;
   padding-bottom: 100px;
   padding-top: 80px;
@@ -38,7 +38,7 @@
     }
 
     &.opened {
-      .questions__item-icon {
+      .mobile-control-mobile__item-icon {
         transform: rotate(45deg);
       }
     }
@@ -81,31 +81,12 @@
   }
 }
 
-@include mobile {
-  .questions {
-    &__container {
-      max-width: 668px;
-
-    }
-  }
-}
-
 @include mobile-small {
-  .questions {
-    &__title {
-      @include font(32px, 38px);
-      margin: 0 0 40px;
-    }
-
+  .mobile-control-mobile {
     &__item-top {
       @include font(16px, 21px);
       padding-top: 15px;
       padding-bottom: 15px;
-    }
-
-    &__item-content {
-      @include font(14px, 21px);
-      padding-bottom: 20px;
     }
   }
 }

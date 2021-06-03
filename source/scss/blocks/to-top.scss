@@ -35,3 +35,10 @@
     transition-delay: 0s;
   }
 }
+
+@include mobile-small {
+  .to-top {
+    transform: scale(0.8);
+    transform-origin: right bottom;
+  }
+}

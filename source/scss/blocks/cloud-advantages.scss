@@ -57,3 +57,51 @@
     }
   }
 }
+
+@include mobile {
+  .cloud-advantages {
+    max-width: 668px;
+    margin: 0 auto;
+    background-color: transparent;
+
+    &__title {
+    }
+
+    &__diagnostics {
+      padding-bottom: 100px;
+      background-position: top 40% right 60px;
+    }
+
+    &__comfort-payment {
+      background-size: 35% auto;
+      background-position: top 50% left 30px;
+    }
+  }
+}
+
+@include mobile-small {
+  .cloud-advantages {
+    padding-top: 80px;
+
+    &__title {
+      @include font(22px, 25px);
+      margin-bottom: 30px;
+    }
+
+    &__diagnostics {
+      padding: 50px 0 250px;
+      background-position: bottom center;
+      background-size: 320px auto;
+    }
+
+    &__comfort-payment {
+      padding: 120px 0 230px;
+      background-position: bottom center;
+      background-size: 250px auto;
+    }
+
+    &__comfort-payment-block {
+      padding-bottom: 70px;
+    }
+  }
+}

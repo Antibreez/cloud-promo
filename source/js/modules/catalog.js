@@ -72,11 +72,10 @@
   $('.catalog__select-block select').change(function() {
     const text = $(this).children('option:selected').text();
     const value = $(this).val();
-    console.log(value);
     $(this).parent().prev().text(text);
 
-    $('.catalog__item').hide();
-    $('.catalog__item[data-brand=' + value + ']').show();
+    $('.catalog__item').addClass('hidden')
+    $('.catalog__item[data-brand=' + value + ']').removeClass('hidden');
 
   })
 

@@ -14,6 +14,13 @@
   }
 }
 
+// Меньше 640
+@mixin mobile-small {
+  @media (max-width: $width-tablet-small - 1px) {
+    @content;
+  }
+}
+
 // СБРОС СТИЛЕЙ
 
 @mixin list-reset {
