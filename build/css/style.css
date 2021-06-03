@@ -4855,6 +4855,12 @@ a {
   background-color: #fff;
 }
 
+@media (max-width: 639px) {
+  .main__body {
+    background-size: 200% auto;
+  }
+}
+
 .btn-primary,
 .btn-secondary,
 .btn-small {
@@ -5562,6 +5568,7 @@ a {
             align-items: center;
     background-color: #fff;
     display: none;
+    z-index: 300;
   }
   .header__nav-list {
     width: 100%;
@@ -6942,6 +6949,9 @@ a {
 }
 
 @media (max-width: 639px) {
+  .device-card .swiper-wrapper {
+    min-height: 300px;
+  }
   .device-card__bages {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -7457,7 +7467,7 @@ a {
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   opacity: 0;
   visibility: hidden;
-  z-index: 200;
+  z-index: 100;
   -webkit-transition: color 0.3s, opacity 0.3s, visibility 0s ease 0.3s;
   transition: color 0.3s, opacity 0.3s, visibility 0s ease 0.3s;
 }

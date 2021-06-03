@@ -133,3 +133,9 @@ a {
   background-color: #fff;
 }
 
+@include mobile-small {
+  .main__body {
+    background-size: 200% auto;
+  }
+}
+

@@ -217,6 +217,10 @@
 
 @include mobile-small {
   .device-card {
+    .swiper-wrapper {
+      min-height: 300px;
+    }
+
     &__bages {
       flex-direction: column;
     }
