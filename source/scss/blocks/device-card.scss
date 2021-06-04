@@ -68,7 +68,7 @@
   }
 
   &__benefits-item {
-    @include font(16px, 24px);
+    @include font(16px, 24px, 400);
     color: #000;
     padding-left: 35px;
     position: relative;
